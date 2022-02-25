@@ -51,27 +51,24 @@ class _MyHomePageState extends State<MyHomePage> {
     activateCleverTapFlutterPluginHandlers();
     CleverTapPlugin.createNotificationChannel(
         "testkk123", "Test Notification Flutter", "Flutter Test", 5, true);
-    // var stuff = ["bags", "shoes"];
-    // CleverTapPlugin.onUserLogin({
-    //   'Name': 'Monkey D Luffy',
-    //   'Identity': '6212525',
-    //   'Email': 'luffy@gmail.com',
-    //   'Phone': '+14155551234',
-    //   'stuff': stuff,
-    //   'Employed': 'Y',
-    //   'Education': 'Graduate',
-    //   'Gender': "M",
-    //   'Tz': 'Asia/Kolkata',
-    //   'Customer Type': 'Gold',
-    //   'Photo':
-    //   "https://i.pinimg.com/originals/4e/aa/b6/4eaab69fcf8d928738072cd355a980db.jpg",
-    //   'DOB': '11-09-1995',
-    //   //DateFormat.yMMMd().format(DateTime.parse("1995-08-31 20:22:27.075")).toString()
-    //   'MSG-email': true,
-    //   'MSG-push': true,
-    //   'MSG-sms': true,
-    //   'MSG-whatsapp': true,
-    // });
+    var stuff = ["bags", "shoes"];
+    CleverTapPlugin.onUserLogin({
+      'Name': 'Lucifer',
+      'Identity': '909821',
+      'Email': 'lucifer@gmail.com',
+      'Phone': '+14364532109',
+      'stuff': stuff,
+      'Employed': 'Y',
+      'Education': 'Graduate',
+      'Gender': "M",
+      'Tz': 'Asia/Kolkata',
+      'Customer Type': 'Gold',
+      'DOB': 11 / 11 / 1991,
+      'MSG-email': true,
+      'MSG-push': true,
+      'MSG-sms': true,
+      'MSG-whatsapp': true,
+    });
     super.initState();
     CleverTapPlugin.initializeInbox();
   }
@@ -83,7 +80,8 @@ class _MyHomePageState extends State<MyHomePage> {
   void activateCleverTapFlutterPluginHandlers() {
     _clevertapPlugin = CleverTapPlugin();
     _clevertapPlugin.setCleverTapInboxDidInitializeHandler(inboxDidInitialize);
-    _clevertapPlugin.setCleverTapDisplayUnitsLoadedHandler(onDisplayUnitsLoaded);
+    _clevertapPlugin
+        .setCleverTapDisplayUnitsLoadedHandler(onDisplayUnitsLoaded);
   }
 
   void inboxDidInitialize() {
@@ -100,7 +98,6 @@ class _MyHomePageState extends State<MyHomePage> {
       debugPrint("Display Units are " + displayUnits.toString());
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -190,10 +187,6 @@ class _MyHomePageState extends State<MyHomePage> {
       'Photo':
           "https://i.pinimg.com/originals/39/95/65/399565162c331db08fde4211da835551.jpg",
     };
-    // var profile = {
-    //   'Photo':
-    //       "https://i.pinimg.com/originals/4e/aa/b6/4eaab69fcf8d928738072cd355a980db.jpg",
-    // };
     CleverTapPlugin.profileSet(profile);
     showToast("Pushed profile " + profile.toString());
   }
@@ -251,12 +244,12 @@ class _MyHomePageState extends State<MyHomePage> {
   void getAdUnits() async {
     var displayUnits = await CleverTapPlugin.getAllDisplayUnits();
     var a = "";
-    for(var i in displayUnits){
+    for (var i in displayUnits) {
       a = i;
     }
     var decodedJson = json.decode(a);
     var jsonValue = json.decode(decodedJson['content']);
-    debugPrint("value = "+jsonValue['message']);
+    debugPrint("value = " + jsonValue['message']);
     // for (var i = 0; i < displayUnits.length; i++) {
     //   var units = displayUnits[i];
     //   displayText(units);
@@ -275,40 +268,3 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 }
-
-// 'Name': 'Monkey D Luffy',
-//       'Identity': '6212525',
-//       'Email': 'luffy@gmail.com',
-//       'Phone': '+14155551234',
-//       'stuff': stuff,
-//       'Employed': 'Y',
-//       'Education': 'Graduate',
-//       'Gender': "M",
-//       'Tz': 'Asia/Kolkata',
-//       'Customer Type': 'Gold',
-//       'Photo':
-//           "https://i.pinimg.com/originals/4e/aa/b6/4eaab69fcf8d928738072cd355a980db.jpg",
-//       'DOB': '11-09-1995',
-//       //DateFormat.yMMMd().format(DateTime.parse("1995-08-31 20:22:27.075")).toString()
-//       'MSG-email': true,
-//       'MSG-push': true,
-//       'MSG-sms': true,
-//       'MSG-whatsapp': true,
-
-
-// 'Name': 'Lucifer',
-// 'Identity': '909821',
-// 'Email': 'lucifer@gmail.com',
-// 'Phone': '+14364532109',
-// 'stuff': stuff,
-// 'Employed': 'Y',
-// 'Education': 'Graduate',
-// 'Gender': "M",
-// 'Tz': 'Asia/Kolkata',
-// 'Customer Type': 'Gold',
-// 'DOB': 11/11/1991,
-// //DateFormat.yMMMd().format(DateTime.parse("1995-08-31 20:22:27.075")).toString()
-// 'MSG-email': true,
-// 'MSG-push': true,
-// 'MSG-sms': true,
-// 'MSG-whatsapp': true,
