@@ -53,17 +53,15 @@ class _MyHomePageState extends State<MyHomePage> {
         "testkk123", "Test Notification Flutter", "Flutter Test", 5, true);
     var stuff = ["bags", "shoes"];
     CleverTapPlugin.onUserLogin({
-      'Name': 'Lucifer',
-      'Identity': '909821',
-      'Email': 'lucifer@gmail.com',
+      'Name': 'Test 26',
+      'Identity': 'test26',
+      'Email': 'test26@test.com',
       'Phone': '+14364532109',
-      'stuff': stuff,
       'Employed': 'Y',
       'Education': 'Graduate',
       'Gender': "M",
       'Tz': 'Asia/Kolkata',
       'Customer Type': 'Gold',
-      'DOB': 11 / 11 / 1991,
       'MSG-email': true,
       'MSG-push': true,
       'MSG-sms': true,
@@ -79,9 +77,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void activateCleverTapFlutterPluginHandlers() {
     _clevertapPlugin = CleverTapPlugin();
+    _clevertapPlugin.setCleverTapPushClickedPayloadReceivedHandler(
+        pushClickedPayloadReceived);
     _clevertapPlugin.setCleverTapInboxDidInitializeHandler(inboxDidInitialize);
     _clevertapPlugin
         .setCleverTapDisplayUnitsLoadedHandler(onDisplayUnitsLoaded);
+  }
+
+  void pushClickedPayloadReceived(Map<String, dynamic> map) {
+    debugPrint("pushClickedPayloadReceived called");
+    this.setState(() async {
+      var data = jsonEncode(map);
+      debugPrint("on Push Click Payload = " + data.toString());
+    });
   }
 
   void inboxDidInitialize() {
