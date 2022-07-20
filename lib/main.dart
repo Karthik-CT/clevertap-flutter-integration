@@ -77,6 +77,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void activateCleverTapFlutterPluginHandlers() {
     _clevertapPlugin = CleverTapPlugin();
+
+    //Handler for receiving Push Clicked Payload
     _clevertapPlugin.setCleverTapPushClickedPayloadReceivedHandler(
         pushClickedPayloadReceived);
     _clevertapPlugin.setCleverTapInboxDidInitializeHandler(inboxDidInitialize);
@@ -84,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
         .setCleverTapDisplayUnitsLoadedHandler(onDisplayUnitsLoaded);
   }
 
+  //For Notification Push Payload
   void pushClickedPayloadReceived(Map<String, dynamic> map) {
     debugPrint("pushClickedPayloadReceived called");
     this.setState(() async {
