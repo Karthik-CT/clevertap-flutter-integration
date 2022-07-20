@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
         .setCleverTapDisplayUnitsLoadedHandler(onDisplayUnitsLoaded);
   }
 
-  //For Notification Push Payload
+  //For Push Notification Clicked Payload
   void pushClickedPayloadReceived(Map<String, dynamic> map) {
     debugPrint("pushClickedPayloadReceived called");
     this.setState(() async {
