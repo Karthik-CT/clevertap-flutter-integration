@@ -1,8 +1,8 @@
 // ignore_for_file:  unnecessary_this
-
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:clevertap_plugin/clevertap_plugin.dart';
+import 'package:flutter/services.dart';
 // import 'package:intl/intl.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 
@@ -44,6 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
   var offLine = false;
   var enableDeviceNetworkingInfo = false;
 
+  //for killed state notification clicked
+  static const platform = MethodChannel("myChannel");
+
   @override
   void initState() {
     CleverTapPlugin.setDebugLevel(3);
@@ -53,20 +56,18 @@ class _MyHomePageState extends State<MyHomePage> {
         "testkk123", "Test Notification Flutter", "Flutter Test", 5, true);
     var stuff = ["bags", "shoes"];
     CleverTapPlugin.onUserLogin({
-      'Name': 'Test 26',
-      'Identity': 'test26',
-      'Email': 'test26@test.com',
+      'Name': 'Test 28',
+      'Identity': 'test28',
+      'Email': 'test28@test.com',
       'Phone': '+14364532109',
-      'Employed': 'Y',
-      'Education': 'Graduate',
-      'Gender': "M",
-      'Tz': 'Asia/Kolkata',
-      'Customer Type': 'Gold',
       'MSG-email': true,
       'MSG-push': true,
       'MSG-sms': true,
       'MSG-whatsapp': true,
     });
+    //For Killed State Handler
+    platform.setMethodCallHandler(nativeMethodCallHandler);
+
     super.initState();
     CleverTapPlugin.initializeInbox();
   }
@@ -78,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void activateCleverTapFlutterPluginHandlers() {
     _clevertapPlugin = CleverTapPlugin();
 
-    //Handler for receiving Push Clicked Payload
+    //Handler for receiving Push Clicked Payload in FG and BG state
     _clevertapPlugin.setCleverTapPushClickedPayloadReceivedHandler(
         pushClickedPayloadReceived);
     _clevertapPlugin.setCleverTapInboxDidInitializeHandler(inboxDidInitialize);
@@ -86,13 +87,26 @@ class _MyHomePageState extends State<MyHomePage> {
         .setCleverTapDisplayUnitsLoadedHandler(onDisplayUnitsLoaded);
   }
 
-  //For Push Notification Clicked Payload
+  //For Push Notification Clicked Payload in FG and BG state
   void pushClickedPayloadReceived(Map<String, dynamic> map) {
     debugPrint("pushClickedPayloadReceived called");
     this.setState(() async {
       var data = jsonEncode(map);
-      debugPrint("on Push Click Payload = " + data.toString());
+      debugPrint("on Push Click Payload = $data");
     });
+  }
+
+  //For Push Notification Clicked Payload in killed state
+  Future<dynamic> nativeMethodCallHandler(MethodCall methodCall) async {
+    debugPrint("killed state called!");
+    switch (methodCall.method) {
+      case "onPushNotificationClicked":
+        debugPrint("onPushNotificationClicked in dart");
+        debugPrint("Clicked Payload in Killed state: ${methodCall.arguments}");
+        return "This is from android!!";
+      default:
+        return "Nothing";
+    }
   }
 
   void inboxDidInitialize() {
@@ -253,14 +267,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void getAdUnits() async {
-    var displayUnits = await CleverTapPlugin.getAllDisplayUnits();
-    var a = "";
-    for (var i in displayUnits) {
-      a = i;
-    }
-    var decodedJson = json.decode(a);
-    var jsonValue = json.decode(decodedJson['content']);
-    debugPrint("value = " + jsonValue['message']);
+    // var displayUnits = await CleverTapPlugin.getAllDisplayUnits();
+    // var a = "";
+    // for (var i in displayUnits) {
+    //   a = i;
+    // }
+    // var decodedJson = json.decode(a);
+    // var jsonValue = json.decode(decodedJson['content']);
+    // debugPrint("value = " + jsonValue['message']);
     // for (var i = 0; i < displayUnits.length; i++) {
     //   var units = displayUnits[i];
     //   displayText(units);
