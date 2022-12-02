@@ -68,7 +68,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     
-        implementation 'com.clevertap.android:clevertap-android-sdk:3.8.2'
+        implementation 'com.clevertap.android:clevertap-android-sdk:4.6.3'
         implementation 'com.android.support:support-v4:28.0.0'
         // implementation platform('com.google.firebase:firebase-bom:29.0.4')
         // implementation 'com.google.firebase:firebase-analytics-ktx'

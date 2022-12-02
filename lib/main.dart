@@ -56,9 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
         "testkk123", "Test Notification Flutter", "Flutter Test", 5, true);
     var stuff = ["bags", "shoes"];
     CleverTapPlugin.onUserLogin({
-      'Name': 'Test 28',
-      'Identity': 'test28',
-      'Email': 'test28@test.com',
+      'Name': 'Test 63',
+      'Identity': 'test63',
+      'Email': 'test63@test.com',
       'Phone': '+14364532109',
       'MSG-email': true,
       'MSG-push': true,
@@ -102,7 +102,8 @@ class _MyHomePageState extends State<MyHomePage> {
     switch (methodCall.method) {
       case "onPushNotificationClicked":
         debugPrint("onPushNotificationClicked in dart");
-        debugPrint("Clicked Payload in Killed state: ${methodCall.arguments}");
+        var killedPayload = methodCall.arguments;
+        debugPrint("Clicked Payload in Killed state: ${killedPayload}");
         return "This is from android!!";
       default:
         return "Nothing";

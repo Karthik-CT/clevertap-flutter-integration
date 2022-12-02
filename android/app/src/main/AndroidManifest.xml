@@ -61,5 +61,19 @@
             </intent-filter>
         </service>
 
+        <!-- <service
+            android:name="com.example.integration_sdk_test.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.clevertap.android.sdk.pushnotification.CTPushNotificationReceiver"
+            android:exported="false"
+            android:enabled="true">
+        </receiver> -->
+
     </application>
 </manifest>

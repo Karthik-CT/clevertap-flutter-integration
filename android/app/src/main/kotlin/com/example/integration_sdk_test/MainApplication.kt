@@ -17,6 +17,8 @@ import java.util.*
 import android.annotation.SuppressLint
 import android.app.Application
 import android.app.NotificationManager
+import android.content.Intent
+import android.os.Build
 
 class MainApplication : Application(), CTPushNotificationListener {
 
@@ -27,7 +29,8 @@ class MainApplication : Application(), CTPushNotificationListener {
         ActivityLifecycleCallback.register(this)
         super.onCreate()
 
-        CleverTapAPI.setDebugLevel(CleverTapAPI.LogLevel.DEBUG);
+        // CleverTapAPI.setDebugLevel(CleverTapAPI.LogLevel.DEBUG);
+        CleverTapAPI.setDebugLevel(3);
         CleverTapAPI.createNotificationChannelGroup(this, "YourGroupId", "YourGroupName")
         CleverTapAPI.createNotificationChannel(
             applicationContext,

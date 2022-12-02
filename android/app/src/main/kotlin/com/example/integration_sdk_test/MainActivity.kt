@@ -17,52 +17,21 @@ import io.flutter.view.FlutterMain
 import java.util.*
 import android.util.Log
 
-class MainActivity : FlutterActivity() {
+import android.content.Intent
+import android.os.Build
+import androidx.appcompat.app.AppCompatActivity
 
-//    var channel: MethodChannel? = null
-//    private val CHANNEL = "myChannel"
+class MainActivity : FlutterActivity() {
 //
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//
-//        val flutterEngine = FlutterEngine(this)
-//        channel = MethodChannel(flutterEngine.getDartExecutor(), "myChannel")
-//
-//
-//
-//
-////        val cleverTapAPI = CleverTapAPI.getDefaultInstance(applicationContext)
-////        cleverTapAPI!!.ctPushNotificationListener = CTPushNotificationListener { payload ->
-////            Log.d("worked", payload.toString())
-////            GetMethodChannel(this, payload!!)
-////        }
-////        Log.d("CTpushListener", cleverTapAPI!!.ctPushNotificationListener.toString())
-//    }
-//
-//    fun GetMethodChannel(context: Context, r: Map<String, Any>) {
-//        FlutterMain.startInitialization(context)
-//        FlutterMain.ensureInitializationComplete(context, arrayOfNulls(0))
-//        val engine = FlutterEngine(context.applicationContext)
-//        val entrypoint = DartExecutor.DartEntrypoint("lib/main.dart", "main")
-//        engine.dartExecutor.executeDartEntrypoint(entrypoint)
-//
-//        MethodChannel(
-//            engine.dartExecutor.binaryMessenger,
-//            CHANNEL
-//        ).invokeMethod("onPushNotificationClicked", r,
-//            object : MethodChannel.Result {
-//                override fun success(o: Any?) {
-//                    Log.d("Results", o.toString())
-//                }
-//
-//                override fun error(s: String, s1: String?, o: Any?) {
-//                    Log.d("No result as error", o.toString())
-//                }
-//
-//                override fun notImplemented() {
-//
-//                    Log.d("No result as error", "cant find ")
-//                }
-//            })
-//    }
+   override fun onCreate(savedInstanceState: Bundle?) {
+       super.onCreate(savedInstanceState)
+   }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            CleverTapAPI.getDefaultInstance(this)?.pushNotificationClickedEvent(intent!!.extras)
+        }
+
+    }
 }
