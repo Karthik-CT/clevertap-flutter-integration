@@ -45,14 +45,14 @@ public class MyFirebaseMessagingService extends FlutterFirebaseMessagingService 
                 }
                 NotificationInfo info = CleverTapAPI.getNotificationInfo(extras);
                 if (info.fromCleverTap) {
-                    CleverTapAPI.getDefaultInstance(this).pushNotificationViewedEvent(extras);
+                    // CleverTapAPI.getDefaultInstance(this).pushNotificationViewedEvent(extras);
+                    CleverTapAPI.getDefaultInstance(this).createNotification(this, extras);
                 } else {
                 }
                 Handler handler = new Handler(Looper.getMainLooper());
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-
                         MainApplication m = new MainApplication();
                     }
                 });

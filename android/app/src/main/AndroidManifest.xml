@@ -4,10 +4,20 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <application
+
+        <!-- android:name="com.clevertap.android.sdk.Application" -->
+        <!-- android:name=".MainApplication" -->
+    <!-- <application
         android:name=".MainApplication"
         android:icon="@mipmap/ic_launcher"
-        android:label="integration_sdk_test">
+        android:label="integration_sdk_test"> -->
+        <application
+            android:name="com.example.integration_sdk_test.MainApplication"
+            android:allowBackup="false"
+            android:fullBackupOnly="false"
+            android:label="integration_sdk_test"
+            android:usesCleartextTraffic="true"
+            android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
@@ -49,9 +59,9 @@
         <!-- <meta-data
           android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
           android:value="1"/>  -->
-        <meta-data
+        <!-- <meta-data
             android:name="FCM_SENDER_ID"
-            android:value="id:487275975172" />
+            android:value="id:487275975172" /> -->
 
         <service
             android:name="com.clevertap.android.sdk.pushnotification.fcm.FcmMessageListenerService"
