@@ -394,7 +394,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   late CleverTapPlugin _clevertapPlugin;
   //for killed state notification clicked
-  static const platform = MethodChannel("myChannel");
+  // static const platform = MethodChannel("myChannel");
   var inboxInitialized = false;
   var optOut = false;
   var offLine = false;
@@ -423,7 +423,7 @@ class _MyAppState extends State<MyApp> {
     } //only for iOS
     //   //var initialUrl = CleverTapPlugin.getInitialUrl();
     WidgetsFlutterBinding.ensureInitialized();
-    platform.setMethodCallHandler(nativeMethodCallHandler);
+    // platform.setMethodCallHandler(nativeMethodCallHandler);
   }
 
   @override
@@ -454,22 +454,22 @@ class _MyAppState extends State<MyApp> {
   }
 
   //For Push Notification Clicked Payload in killed state
-  Future<dynamic> nativeMethodCallHandler(MethodCall methodCall) async {
-    // Future.delayed(Duration(seconds: 20), () {
-    //   get_Toast("message", Colors.red, TOAST_LONG, 12);
-    // });
-    debugPrint("I am Verbose Log With Default TAG");
-    // debugPrint("killed state called!");
-    // switch (methodCall.method) {
-    //   case "onPushNotificationClicked":
-    //     debugPrint("onPushNotificationClicked in dart");
-    //     var killedPayload = methodCall.arguments;
-    //     debugPrint("Clicked Payload in Killed state: ${killedPayload}");
-    //     return "This is from android!!";
-    //   default:
-    //     return "Nothing";
-    // }
-  }
+  // Future<dynamic> nativeMethodCallHandler(MethodCall methodCall) async {
+  //   // Future.delayed(Duration(seconds: 20), () {
+  //   //   get_Toast("message", Colors.red, TOAST_LONG, 12);
+  //   // });
+  //   debugPrint("I am Verbose Log With Default TAG");
+  //   // debugPrint("killed state called!");
+  //   // switch (methodCall.method) {
+  //   //   case "onPushNotificationClicked":
+  //   //     debugPrint("onPushNotificationClicked in dart");
+  //   //     var killedPayload = methodCall.arguments;
+  //   //     debugPrint("Clicked Payload in Killed state: ${killedPayload}");
+  //   //     return "This is from android!!";
+  //   //   default:
+  //   //     return "Nothing";
+  //   // }
+  // }
 
   @override
   Widget build(BuildContext context) {

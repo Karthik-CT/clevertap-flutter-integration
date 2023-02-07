@@ -178,7 +178,7 @@ class MainApplication : Application(), CTPushNotificationListener{
         FlutterMain.startInitialization(context)
         FlutterMain.ensureInitializationComplete(context, arrayOfNulls(0))
         val engine = FlutterEngine(context.applicationContext)
-        val entrypoint = DartExecutor.DartEntrypoint("lib/main.dart", "main")
+        val entrypoint = DartExecutor.DartEntrypoint("lib/home.dart", "main")
         engine.dartExecutor.executeDartEntrypoint(entrypoint)
 
         MethodChannel(
