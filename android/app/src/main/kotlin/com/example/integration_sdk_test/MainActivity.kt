@@ -25,21 +25,28 @@ import com.clevertap.android.sdk.CTInboxStyleConfig
 
 class MainActivity : FlutterActivity() {
 
+    var cleverTapDefaultInstance: CleverTapAPI? = null
+
    override fun onCreate(savedInstanceState: Bundle?) {
        super.onCreate(savedInstanceState)
-       CleverTapAPI.getDefaultInstance(this)?.apply {
+    //    CleverTapAPI.getDefaultInstance(this)?.apply {
             
-            // ctNotificationInboxListener = this@MainActivity
+    //         // ctNotificationInboxListener = this@MainActivity
             
-            //Initialize the inbox and wait for callbacks on overridden methods
-            // initializeInbox()
-        }
+    //         //Initialize the inbox and wait for callbacks on overridden methods
+    //         // initializeInbox()
+    //     }
+
+
+
+    cleverTapDefaultInstance = CleverTapAPI.getDefaultInstance(applicationContext)
    }
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            CleverTapAPI.getDefaultInstance(this)?.pushNotificationClickedEvent(intent!!.extras)
+            // CleverTapAPI.getDefaultInstance(this)?.pushNotificationClickedEvent(intent!!.extras)
+            cleverTapDefaultInstance?.pushNotificationClickedEvent(intent!!.extras)
         }
     }
 

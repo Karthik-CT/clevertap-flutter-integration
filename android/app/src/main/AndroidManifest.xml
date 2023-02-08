@@ -12,7 +12,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="integration_sdk_test"> -->
         <application
-            android:name="com.example.integration_sdk_test.MainApplication"
+            android:name="com.clevertap.android.sdk.Application"
             android:allowBackup="false"
             android:fullBackupOnly="false"
             android:label="integration_sdk_test"
