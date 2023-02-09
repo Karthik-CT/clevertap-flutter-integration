@@ -313,16 +313,16 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void showInboxWithTabs() {
-    // var arrTab = ["promos", "offers"];
-    // var styleConfig = {
-    //   'noMessageTextColor': '#FF6600',
-    //   'noMessageText': 'No message(s) to show.',
-    //   'navBarTitle': 'App Inbox KK',
-    //   'navBarTitleColor': '#101727',
-    //   'tabs': arrTab,
-    //   'navBarColor': '#EF4444'
-    // };
-    // CleverTapPlugin.showInbox(styleConfig);
+    var arrTab = ["promos", "offers"];
+    var styleConfig = {
+      'noMessageTextColor': '#FF6600',
+      'noMessageText': 'No message(s) to show.',
+      'navBarTitle': 'App Inbox KK',
+      'navBarTitleColor': '#101727',
+      'tabs': arrTab,
+      'navBarColor': '#EF4444'
+    };
+    CleverTapPlugin.showInbox(styleConfig);
     CleverTapPlugin.initializeInbox();
   }
 
@@ -361,125 +361,3 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 }
-
-//sadar code
-
-// import 'dart:async';
-// import 'dart:convert';
-// import 'dart:io';
-
-// import 'package:clevertap_plugin/clevertap_plugin.dart';
-// import 'package:firebase_core/firebase_core.dart';
-// import 'package:flutter/foundation.dart';
-// import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
-
-// import 'home.dart';
-
-// String ADDTOCARTBOXNAME = "add_to_cart";
-// String ADDTOWISHLISTBOXNAME = "add_to_wislist";
-
-// Future<void> main() async {
-//   // WidgetsFlutterBinding.ensureInitialized();
-//   runApp(const MyApp());
-// }
-
-// class MyApp extends StatefulWidget {
-//   const MyApp({Key? key}) : super(key: key);
-
-//   @override
-//   State<MyApp> createState() => _MyAppState();
-// }
-
-// class _MyAppState extends State<MyApp> {
-//   late CleverTapPlugin _clevertapPlugin;
-//   //for killed state notification clicked
-//   // static const platform = MethodChannel("myChannel");
-//   var inboxInitialized = false;
-//   var optOut = false;
-//   var offLine = false;
-//   var enableDeviceNetworkingInfo = false;
-//   @override
-//   void initState() {
-//     super.initState();
-
-//     CleverTapPlugin.setDebugLevel(3);
-//     initPlatformState();
-//     activateCleverTapFlutterPluginHandlers();
-//     CleverTapPlugin.createNotificationChannel(
-//         "testkk123", "Test Notification Flutter", "Flutter Test", 5, true);
-
-//     //For Killed State Handler
-
-//     //Remove this method to stop OneSignal Debugging
-// //     OneSignal.shared.setLogLevel(OSLogLevel.verbose, OSLogLevel.none);
-// //     OneSignal.shared.setAppId("34ba8493-c8ae-44a3-bd8c-afbe7cacb57a");
-// // // The promptForPushNotificationsWithUserResponse function will show the iOS or Android push notification prompt. We recommend removing the following code and instead using an In-App Message to prompt for notification permission
-// //     OneSignal.shared.promptUserForPushNotificationPermission().then((accepted) {
-// //       print("Accepted permission: $accepted");
-// //     });
-//     if (Platform.isIOS) {
-//       CleverTapPlugin.registerForPush();
-//     } //only for iOS
-//     //   //var initialUrl = CleverTapPlugin.getInitialUrl();
-//     WidgetsFlutterBinding.ensureInitialized();
-//     // platform.setMethodCallHandler(nativeMethodCallHandler);
-//   }
-
-//   @override
-//   void dispose() {
-//     // _sub?.cancel();
-//     super.dispose();
-//   }
-
-//   Future<void> initPlatformState() async {
-//     if (!mounted) return;
-//   }
-
-//   void activateCleverTapFlutterPluginHandlers() {
-//     _clevertapPlugin = CleverTapPlugin();
-
-//     //Handler for receiving Push Clicked Payload in FG and BG state
-//     _clevertapPlugin.setCleverTapPushClickedPayloadReceivedHandler(
-//         pushClickedPayloadReceived);
-//   }
-
-//   //For Push Notification Clicked Payload in FG and BG state
-//   void pushClickedPayloadReceived(Map<String, dynamic> map) {
-//     debugPrint("pushClickedPayloadReceived called");
-//     this.setState(() async {
-//       var data = jsonEncode(map);
-//       debugPrint("on Push Click Payload = $data");
-//     });
-//   }
-
-//   //For Push Notification Clicked Payload in killed state
-//   // Future<dynamic> nativeMethodCallHandler(MethodCall methodCall) async {
-//   //   // Future.delayed(Duration(seconds: 20), () {
-//   //   //   get_Toast("message", Colors.red, TOAST_LONG, 12);
-//   //   // });
-//   //   debugPrint("I am Verbose Log With Default TAG");
-//   //   // debugPrint("killed state called!");
-//   //   // switch (methodCall.method) {
-//   //   //   case "onPushNotificationClicked":
-//   //   //     debugPrint("onPushNotificationClicked in dart");
-//   //   //     var killedPayload = methodCall.arguments;
-//   //   //     debugPrint("Clicked Payload in Killed state: ${killedPayload}");
-//   //   //     return "This is from android!!";
-//   //   //   default:
-//   //   //     return "Nothing";
-//   //   // }
-//   // }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Splash Screen',
-//       theme: ThemeData(
-//         primarySwatch: Colors.blue,
-//       ),
-//       home: Home(),
-//       debugShowCheckedModeBanner: false,
-//     );
-//   }
-// }
