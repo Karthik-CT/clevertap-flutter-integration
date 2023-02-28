@@ -3,7 +3,7 @@ package com.example.integration_sdk_test
 // import android.content.Context
 // import android.util.Log
 // import com.clevertap.android.sdk.ActivityLifecycleCallback
-// import com.clevertap.android.sdk.CleverTapAPI
+// import com.clevertap.androaid.sdk.CleverTapAPI
 // import com.clevertap.android.sdk.pushnotification.CTPushNotificationListener
 // import io.flutter.app.FlutterApplication
 // import io.flutter.embedding.engine.FlutterEngine

@@ -23,6 +23,9 @@ class _MyHomePageState extends State<Home> {
   late CleverTapPlugin _clevertapPlugin;
   //for killed state notification clicked
   static const platform = MethodChannel("myChannel");
+
+  //for iOS
+  static const notificationTapChannel = MethodChannel("notificationTapChannel");
   var inboxInitialized = false;
   var optOut = false;
   var offLine = false;
@@ -42,6 +45,8 @@ class _MyHomePageState extends State<Home> {
     CleverTapPlugin.createNotificationChannel(
         "testkk123", "Test Notification Flutter", "Flutter Test", 5, true);
     platform.setMethodCallHandler(nativeMethodCallHandler);
+
+    notificationTapChannel.setMethodCallHandler(notificationTapCallback);
   }
 
   Future<void> initPlatformState() async {
@@ -65,7 +70,7 @@ class _MyHomePageState extends State<Home> {
     });
   }
 
-  //For Push Notification Clicked Payload in killed state
+  //For Push Notification Clicked Payload in killed state Android
   Future<dynamic> nativeMethodCallHandler(MethodCall methodCall) async {
     // Future.delayed(Duration(seconds: 20), () {
     //   get_Toast("message", Colors.red, TOAST_LONG, 12);
@@ -81,6 +86,11 @@ class _MyHomePageState extends State<Home> {
     //   default:
     //     return "Nothing";
     // }
+  }
+
+  //for Push Notification Clicked Payload in killed state iOS
+  Future<dynamic> notificationTapCallback(MethodCall methodCall) async {
+    debugPrint("Killed state iOS");
   }
 
   @override

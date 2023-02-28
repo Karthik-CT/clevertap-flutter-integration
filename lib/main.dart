@@ -47,6 +47,9 @@ class _MyHomePageState extends State<MyHomePage> {
   //for killed state notification clicked
   static const platform = MethodChannel("myChannel");
 
+  //for iOS
+  static const notificationTapChannel = MethodChannel("notificationTapChannel");
+
   @override
   void initState() {
     // CleverTapPlugin.setDebugLevel(3);
@@ -86,6 +89,8 @@ class _MyHomePageState extends State<MyHomePage> {
     //   'MSG-whatsapp': true,
     // });
     platform.setMethodCallHandler(this.nativeMethodCallHandler);
+
+    notificationTapChannel.setMethodCallHandler(this.notificationTapCallback);
 
     // CleverTapPlugin.initializeInbox();
   }
@@ -140,6 +145,11 @@ class _MyHomePageState extends State<MyHomePage> {
     //   default:
     //     return "Nothing";
     // }
+  }
+
+  //for Push Notification Clicked Payload in killed state iOS
+  Future<dynamic> notificationTapCallback(MethodCall methodCall) async {
+    debugPrint("Killed state iOS");
   }
 
   void inboxDidInitialize() {
@@ -313,16 +323,16 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void showInboxWithTabs() {
-    // var arrTab = ["promos", "offers"];
-    // var styleConfig = {
-    //   'noMessageTextColor': '#FF6600',
-    //   'noMessageText': 'No message(s) to show.',
-    //   'navBarTitle': 'App Inbox KK',
-    //   'navBarTitleColor': '#101727',
-    //   'tabs': arrTab,
-    //   'navBarColor': '#EF4444'
-    // };
-    // CleverTapPlugin.showInbox(styleConfig);
+    var arrTab = ["promos", "offers"];
+    var styleConfig = {
+      'noMessageTextColor': '#FF6600',
+      'noMessageText': 'No message(s) to show.',
+      'navBarTitle': 'App Inbox KK',
+      'navBarTitleColor': '#101727',
+      'tabs': arrTab,
+      'navBarColor': '#EF4444'
+    };
+    CleverTapPlugin.showInbox(styleConfig);
     CleverTapPlugin.initializeInbox();
   }
 
@@ -332,6 +342,13 @@ class _MyHomePageState extends State<MyHomePage> {
     };
     CleverTapPlugin.recordEvent("Karthik's Native Display Event", eventData);
     getAdUnits();
+  }
+
+  void onDisplayUnitsLoaded(List<dynamic> displayUnits) {
+    this.setState(() async {
+      List? displayUnits = await CleverTapPlugin.getAllDisplayUnits();
+      debugPrint("Display Units = $displayUnits");
+    });
   }
 
   void getAdUnits() async {
