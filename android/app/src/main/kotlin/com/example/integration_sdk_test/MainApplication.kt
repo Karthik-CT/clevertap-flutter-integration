@@ -132,7 +132,8 @@ class MainApplication : Application(), CTPushNotificationListener{
             "test",
             "test",
             NotificationManager.IMPORTANCE_MAX,
-            true
+            true,
+            "notificationsound1.mp3"
         )
         
         val cleverTapAPI = CleverTapAPI.getDefaultInstance(applicationContext)

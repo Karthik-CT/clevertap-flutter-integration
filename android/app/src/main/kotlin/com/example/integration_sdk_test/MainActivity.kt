@@ -9,7 +9,6 @@ import com.clevertap.android.sdk.pushnotification.CTPushNotificationListener
 import io.flutter.app.FlutterApplication
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.dart.DartExecutor
-import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.PluginRegistry
 import io.flutter.plugin.common.PluginRegistry.PluginRegistrantCallback
 //import io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService
@@ -22,6 +21,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import com.clevertap.android.sdk.CTInboxListener
 import com.clevertap.android.sdk.CTInboxStyleConfig
+import io.flutter.plugin.common.MethodChannel
 
 class MainActivity : FlutterActivity() {
 
