@@ -71,7 +71,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
 
-    implementation 'com.clevertap.android:clevertap-android-sdk:4.7.4'
+    implementation 'com.clevertap.android:clevertap-android-sdk:5.1.0'
         implementation 'com.android.support:support-v4:28.0.0'
         // implementation platform('com.google.firebase:firebase-bom:29.0.4')
         // implementation 'com.google.firebase:firebase-analytics-ktx'
@@ -85,6 +85,7 @@ dependencies {
     //    implementation 'com.google.android.exoplayer:exoplayer:2.15.1'
     //    implementation 'com.google.android.exoplayer:exoplayer-hls:2.15.1'
     //    implementation 'com.google.android.exoplayer:exoplayer-ui:2.15.1'
+    implementation "com.clevertap.android:push-templates:1.1.0"
 
 
 }

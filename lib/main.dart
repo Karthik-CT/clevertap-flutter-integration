@@ -59,15 +59,15 @@ class _LoginDemoState extends State<LoginDemo> {
     print("CTID: ${CleverTapPlugin.getCleverTapID().toString()}");
     //for killed state notification clicked callback
     _handleKilledStateNotificationInteraction();
-    CleverTapPlugin.createNotificationChannel(
-        "testkk123", "Test Notification Flutter", "Flutter Test", 5, true);
-    CleverTapPlugin.createNotificationChannelWithSound(
-        "testkk123",
-        "Test Notification Flutter",
-        "Flutter Test",
-        5,
-        true,
-        "notificationsound1.mp3");
+    // CleverTapPlugin.createNotificationChannel(
+    //     "testkk123", "Test Notification Flutter", "Flutter Test", 5, true);
+    // CleverTapPlugin.createNotificationChannelWithSound(
+    //     "testkk123",
+    //     "Test Notification Flutter",
+    //     "Flutter Test",
+    //     5,
+    //     true,
+    //     "notificationsound1.mp3");
   }
 
   Future<void> initPlatformState() async {
@@ -186,7 +186,7 @@ class _LoginDemoState extends State<LoginDemo> {
                 decoration: BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(20)),
-                child: FlatButton(
+                child: TextButton(
                   onPressed: () {
                     flutterOnUserLogin();
                     Navigator.push(
@@ -208,7 +208,7 @@ class _LoginDemoState extends State<LoginDemo> {
                 decoration: BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(20)),
-                child: FlatButton(
+                child: TextButton(
                   onPressed: () {
                     flutterPushProfile();
                     Navigator.push(
