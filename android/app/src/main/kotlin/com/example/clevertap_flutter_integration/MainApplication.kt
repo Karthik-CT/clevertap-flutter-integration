@@ -17,17 +17,20 @@ import io.flutter.plugin.common.PluginRegistry.PluginRegistrantCallback
 import io.flutter.view.FlutterMain
 import java.util.*
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.Application
 import android.app.NotificationManager
 import android.content.Intent
 import android.os.Build
+import android.os.Bundle
+import com.clevertap.android.pushtemplates.PTConstants
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.dart.DartExecutor.DartEntrypoint
 import com.clevertap.android.pushtemplates.PushTemplateNotificationHandler
 import com.clevertap.android.sdk.interfaces.NotificationHandler
 
 // class MainApplication : Application(), CTPushNotificationListener{
-class MainApplication : Application(){
+class MainApplication : Application(), Application.ActivityLifecycleCallbacks {
 
     var channel: MethodChannel? = null
     private val CHANNEL = "myChannel"
@@ -35,6 +38,7 @@ class MainApplication : Application(){
 
     override fun onCreate() {
         ActivityLifecycleCallback.register(this)
+        registerActivityLifecycleCallbacks(this)
         super.onCreate()
 
         //Tentative solution to solve killed state issue for notification click callback.
@@ -89,9 +93,35 @@ class MainApplication : Application(){
             })
     }
 
+    override fun onActivityCreated(p0: Activity, p1: Bundle?) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val intent = p0.intent
+            NotificationUtils.dismissNotification(intent, applicationContext)
+        }
+    }
+
+    override fun onActivityStarted(p0: Activity) {
+    }
+
+    override fun onActivityResumed(p0: Activity) {
+    }
+
+    override fun onActivityPaused(p0: Activity) {
+    }
+
+    override fun onActivityStopped(p0: Activity) {
+    }
+
+    override fun onActivitySaveInstanceState(p0: Activity, p1: Bundle) {
+    }
+
+    override fun onActivityDestroyed(p0: Activity) {
+    }
+
     // override fun onNotificationClickedPayloadReceived(payload: HashMap<String, Any>?) {
     //     Log.d("workedLLLL", payload.toString())
     //     GetMethodChannel(this, payload!!)
     // }
 
 }
+
