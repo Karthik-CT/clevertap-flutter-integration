@@ -48,6 +48,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   TextEditingController pushEventController = TextEditingController();
 
+  static const notificationTapChannel = MethodChannel("notificationTapChannel");
+
   //push notification clicked callback in killed state
   void _handleKilledStateNotificationInteraction() async {
     CleverTapAppLaunchNotification appLaunchNotification =
@@ -77,11 +79,11 @@ class _MyHomePageState extends State<MyHomePage> {
       'dob': CleverTapPlugin.getCleverTapDate(DateTime.now()),
     };
     CleverTapPlugin.profileSet(profile);
-
     super.initState();
     CleverTapPlugin.setDebugLevel(3);
     initPlatformState();
     activateCleverTapFlutterPluginHandlers();
+    notificationTapChannel.setMethodCallHandler(this.notificationTapCallback);
     //for killed state notification clicked callback
     _handleKilledStateNotificationInteraction();
     CleverTapPlugin.createNotificationChannel(
@@ -102,11 +104,12 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void activateCleverTapFlutterPluginHandlers() {
+    print("Activate Flutter is called");
     _clevertapPlugin = CleverTapPlugin();
 
     //Handler for receiving Push Clicked Payload in FG and BG state
     _clevertapPlugin.setCleverTapPushClickedPayloadReceivedHandler(
-        _pushClickedPayloadReceived);
+        pushClickedPayloadReceived);
     _clevertapPlugin.setCleverTapInboxDidInitializeHandler(inboxDidInitialize);
     // _clevertapPlugin
     //     .setCleverTapDisplayUnitsLoadedHandler(onDisplayUnitsLoaded);
@@ -126,12 +129,26 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  //for Push Notification Clicked Payload via MethodChannel
+  Future<dynamic> notificationTapCallback(MethodCall methodCall) async {
+    debugPrint("Killed state iOS");
+    switch (methodCall.method) {
+      case "iosPushNotificationClicked":
+        debugPrint("iosPushNotificationClicked in dart");
+        var killedPayload = methodCall.arguments;
+        debugPrint("iOS Clicked Payload via MethodChannel: ${killedPayload}");
+        return "Success";
+      default:
+        return "Nothing";
+    }
+  }
+
   //For Push Notification Clicked Payload in FG and BG state
-  _pushClickedPayloadReceived(Map<String, dynamic> map) {
-    debugPrint("pushClickedPayloadReceived called");
+  void pushClickedPayloadReceived(Map<String, dynamic> map) {
+    print("pushClickedPayloadReceived called");
     this.setState(() async {
       var data = jsonEncode(map);
-      debugPrint("on Push Click Payload = $data");
+      print("on Push Click Payload = $data");
     });
   }
 
