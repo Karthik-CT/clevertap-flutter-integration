@@ -26,6 +26,13 @@ import clevertap_plugin
     }
     
     func registerForPush() {
+        // register category with actions
+        let action1 = UNNotificationAction(identifier: "action_1", title: "Back", options: [])
+        let action2 = UNNotificationAction(identifier: "action_2", title: "Next", options: [])
+        let action3 = UNNotificationAction(identifier: "action_3", title: "View In App", options: [])
+        let category = UNNotificationCategory(identifier: "CTNotification", actions: [action1, action2, action3], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        
         // Register for Push notifications
         UNUserNotificationCenter.current().delegate = self
         // request Permissions
@@ -47,6 +54,12 @@ import clevertap_plugin
         channel.invokeMethod("iosPushNotificationClicked", arguments: response.notification.request.content.userInfo)
         
         NSLog("%@:[clevertap] did receive notification response: %@", self.description, response.notification.request.content.userInfo)
+        
+        let evntProps = [
+            "deep link": response.notification.request.content.userInfo["wzrk_dl"]
+        ] as [String : Any]
+        
+        CleverTap.sharedInstance()!.recordEvent("Event_from_Did_Receive", withProps: evntProps)
         
         CleverTap.sharedInstance()!.handleNotification(withData: response.notification.request.content.userInfo)
         completionHandler()
