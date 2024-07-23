@@ -12,7 +12,7 @@ import clevertap_plugin
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-//        GeneratedPluginRegistrant.register(with: self)
+        GeneratedPluginRegistrant.register(with: self)
         
         flutterViewController = window?.rootViewController as? FlutterViewController
         

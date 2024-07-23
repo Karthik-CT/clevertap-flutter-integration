@@ -1,10 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:clevertap_plugin/clevertap_plugin.dart';
 import 'package:flutter/material.dart';
 import 'HomePage.dart';
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:clevertap_plugin/clevertap_plugin.dart';
+// import 'package:clevertap_plugin/clevertap_plugin.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'dart:io' show Platform;
@@ -68,6 +69,18 @@ class _LoginDemoState extends State<LoginDemo> {
     //     5,
     //     true,
     //     "notificationsound1.mp3");
+
+    // CleverTapPlugin.onUserLogin({
+    //   'Name': "testingflutter1",
+    //   'Identity': "testingflutter1",
+    //   'Email': "testingflutter1@flutter.com",
+    //   'Phone': "+918811111111",
+    //   'MSG-email': true,
+    //   'MSG-push': true,
+    //   'MSG-sms': true,
+    //   'MSG-whatsapp': true,
+    // });
+
   }
 
   Future<void> initPlatformState() async {

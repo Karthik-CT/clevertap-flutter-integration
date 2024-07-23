@@ -41,9 +41,9 @@ class MainActivity: FlutterActivity() {
             cleverTapDefaultInstance?.pushNotificationClickedEvent(intent!!.extras)
         }
 
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-//            NotificationUtils.dismissNotification(intent, applicationContext)
-//        }
+       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+           NotificationUtils.dismissNotification(intent, applicationContext)
+       }
 
     }
 }

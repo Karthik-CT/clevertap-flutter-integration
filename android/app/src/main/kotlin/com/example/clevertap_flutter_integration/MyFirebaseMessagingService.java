@@ -28,7 +28,7 @@ import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.embedding.engine.FlutterEngineCache;
 import io.flutter.embedding.engine.dart.DartExecutor;
 import io.flutter.plugin.common.MethodChannel;
-import io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService;
+// import io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService;
 import com.clevertap.android.sdk.pushnotification.fcm.CTFcmMessageHandler;
 import com.google.firebase.messaging.FirebaseMessagingService;
 

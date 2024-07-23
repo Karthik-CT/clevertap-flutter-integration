@@ -31,7 +31,7 @@ target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
-  pod 'CleverTap-iOS-SDK'
+#  pod 'CleverTap-iOS-SDK', "6.2.1"
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
@@ -40,13 +40,13 @@ target 'NotificationService' do
   use_frameworks!
   # Pods for NotificationService
   pod 'CTNotificationService'
-  pod "CleverTap-iOS-SDK"
+  pod "CleverTap-iOS-SDK", "6.2.1"
 end
 
 target 'NotificationContentDemo' do
   use_frameworks!
   pod 'CTNotificationContent'
-  pod "CleverTap-iOS-SDK"
+  pod "CleverTap-iOS-SDK", "6.2.1"
 end
 
 post_install do |installer|

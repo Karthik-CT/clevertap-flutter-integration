@@ -1,18 +1,18 @@
 PODS:
-  - CleverTap-iOS-SDK (6.1.0):
+  - CleverTap-iOS-SDK (6.2.1):
     - SDWebImage (~> 5.11)
-  - clevertap_plugin (2.2.0):
-    - CleverTap-iOS-SDK (= 6.1.0)
+  - clevertap_plugin (2.4.0):
+    - CleverTap-iOS-SDK (= 6.2.1)
     - Flutter
-  - CTNotificationContent (0.2.6)
-  - CTNotificationService (0.1.5)
+  - CTNotificationContent (0.2.7)
+  - CTNotificationService (0.1.7)
   - Flutter (1.0.0)
-  - SDWebImage (5.19.0):
-    - SDWebImage/Core (= 5.19.0)
-  - SDWebImage/Core (5.19.0)
+  - SDWebImage (5.19.2):
+    - SDWebImage/Core (= 5.19.2)
+  - SDWebImage/Core (5.19.2)
 
 DEPENDENCIES:
-  - CleverTap-iOS-SDK
+  - CleverTap-iOS-SDK (= 6.2.1)
   - clevertap_plugin (from `.symlinks/plugins/clevertap_plugin/ios`)
   - CTNotificationContent
   - CTNotificationService
@@ -32,13 +32,13 @@ EXTERNAL SOURCES:
     :path: Flutter
 
 SPEC CHECKSUMS:
-  CleverTap-iOS-SDK: 9d8d5def08d2f51a3a071831b6049ea857c35013
-  clevertap_plugin: e45fc6f31f2c4948691a133b784d96e6e435b780
-  CTNotificationContent: 9bf1afde05eb091f9b68f757d22a3a8cd214b279
-  CTNotificationService: 844eb0cf5a6260b76e05420dde49312b72c5ad7c
+  CleverTap-iOS-SDK: 78ea6d752d84918f0426f7b3959777d862bcb348
+  clevertap_plugin: 81d30133ce84661238d3dc02d1321e15cfe46e12
+  CTNotificationContent: 149ec0d68884bf26ef0c045199f6a4e1b5a22dfd
+  CTNotificationService: 3eceea27cf0e28a2e14267bb706013363eb620c6
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  SDWebImage: 981fd7e860af070920f249fd092420006014c3eb
+  SDWebImage: dfe95b2466a9823cf9f0c6d01217c06550d7b29a
 
-PODFILE CHECKSUM: 8e9e9d56502a6f92263493e1d6ddcd656511abab
+PODFILE CHECKSUM: ee62b8554df43e967ef4ae51f2e0a0f5648c6ed3
 
 COCOAPODS: 1.14.3
