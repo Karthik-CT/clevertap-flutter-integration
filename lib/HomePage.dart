@@ -1,5 +1,7 @@
 // ignore_for_file:  unnecessary_this
 import 'dart:convert';
+import 'package:clevertap_flutter_integration/Page1.dart';
+import 'package:clevertap_plugin/src/typedefs.dart';
 import 'package:flutter/material.dart';
 import 'package:clevertap_plugin/clevertap_plugin.dart';
 import 'package:flutter/services.dart';
@@ -9,6 +11,8 @@ import 'dart:io' show Platform;
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 
 GlobalKey globalKey = GlobalKey();
+
+bool navigatingFromInbox = false;
 
 void main() async {
   runApp(const HomePage());
@@ -96,7 +100,14 @@ class _MyHomePageState extends State<MyHomePage> {
         true,
         "notificationsound1.mp3");
 
-    // CleverTapPlugin.initializeInbox();
+    CleverTapPlugin.initializeInbox();
+
+    customAppInbox();
+  }
+
+  void customAppInbox() async {
+    List? messages = await CleverTapPlugin.getAllInboxMessages();
+    print("Custom App Inbox -> $messages");
   }
 
   Future<void> initPlatformState() async {
@@ -113,11 +124,63 @@ class _MyHomePageState extends State<MyHomePage> {
     _clevertapPlugin.setCleverTapInboxDidInitializeHandler(inboxDidInitialize);
     // _clevertapPlugin
     //     .setCleverTapDisplayUnitsLoadedHandler(onDisplayUnitsLoaded);
+
+    //App Inbox Clicked callback
+    _clevertapPlugin.setCleverTapInboxNotificationMessageClickedHandler(
+        inboxNotificationMessageClicked);
+
     _clevertapPlugin.setCleverTapDisplayUnitsLoadedHandler(natDisp);
 
     //InApp
     _clevertapPlugin.setCleverTapInAppNotificationButtonClickedHandler(
         inAppNotificationButtonClicked);
+  }
+
+  void inboxNotificationMessageClicked(
+      Map<String, dynamic>? data, int contentPageIndex, int buttonIndex) {
+    this.setState(() {
+      print("App Inbox -> "
+              "inboxNotificationMessageClicked called = InboxItemClicked at page-index "
+              "$contentPageIndex with button-index $buttonIndex" +
+          data.toString());
+
+      var deepLink = "";
+      var content = data?['msg']['content'][0];
+      var action = content['action'];
+      var dl_url = action['url'];
+      if (dl_url != null) {
+        if (Platform.isAndroid) {
+          if (dl_url['android'] != null && dl_url['android']['text'] != null) {
+            deepLink = dl_url['android']['text'];
+          }
+        } else {
+          if (dl_url['ios'] != null && dl_url['ios']['text'] != null) {
+            deepLink = dl_url['ios']['text'];
+          }
+        }
+      }
+      print("App Inbox -> $deepLink ");
+      String deepLinkSplit = deepLink.split('/').last;
+      print("App Inbox -> $deepLinkSplit ");
+      if (deepLinkSplit == "page1") {
+        // Ensuring the widget is still mounted before navigating
+        if (mounted) {
+          print("App Inbox -> Navigating to Page1");
+          // Dismiss the inbox and then navigate
+          CleverTapPlugin.dismissInbox().then((_) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Page1()),
+            ).then((_) {
+              print("App Inbox -> Navigation complete");
+              showToast("App Inbox -> Navigated");
+            });
+          });
+        } else {
+          print("App Inbox -> Widget not mounted, navigation aborted");
+        }
+      }
+    });
   }
 
   //inApp
@@ -285,7 +348,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void showInbox() {
-    CleverTapPlugin.initializeInbox();
     var styleConfig = {
       'noMessageTextColor': '#FF6600',
       'noMessageText': 'No message(s) to show.',
@@ -324,6 +386,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void cleverTapND() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Page1()),
+    );
+
     print("Debug Test");
     this.setState(() async {
       List? displayUnits = await CleverTapPlugin.getAllDisplayUnits();
@@ -357,3 +424,17 @@ class _MyHomePageState extends State<MyHomePage> {
         "_handleKilledStateNotificationInteraction => Type: $type, Title: $title, Message: $message ");
   }
 }
+
+// class Page1 extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Page 1'),
+//       ),
+//       body: Center(
+//         child: Text('Welcome to Page 1'),
+//       ),
+//     );
+//   }
+// }

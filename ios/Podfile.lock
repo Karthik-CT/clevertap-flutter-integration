@@ -7,9 +7,9 @@ PODS:
   - CTNotificationContent (0.2.7)
   - CTNotificationService (0.1.7)
   - Flutter (1.0.0)
-  - SDWebImage (5.19.2):
-    - SDWebImage/Core (= 5.19.2)
-  - SDWebImage/Core (5.19.2)
+  - SDWebImage (5.19.4):
+    - SDWebImage/Core (= 5.19.4)
+  - SDWebImage/Core (5.19.4)
 
 DEPENDENCIES:
   - CleverTap-iOS-SDK (= 6.2.1)
@@ -37,7 +37,7 @@ SPEC CHECKSUMS:
   CTNotificationContent: 149ec0d68884bf26ef0c045199f6a4e1b5a22dfd
   CTNotificationService: 3eceea27cf0e28a2e14267bb706013363eb620c6
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  SDWebImage: dfe95b2466a9823cf9f0c6d01217c06550d7b29a
+  SDWebImage: 066c47b573f408f18caa467d71deace7c0f8280d
 
 PODFILE CHECKSUM: ee62b8554df43e967ef4ae51f2e0a0f5648c6ed3
 

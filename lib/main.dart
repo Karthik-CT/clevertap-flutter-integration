@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:clevertap_flutter_integration/Page1.dart';
 import 'package:clevertap_plugin/clevertap_plugin.dart';
 import 'package:flutter/material.dart';
 import 'HomePage.dart';
@@ -80,7 +81,6 @@ class _LoginDemoState extends State<LoginDemo> {
     //   'MSG-sms': true,
     //   'MSG-whatsapp': true,
     // });
-
   }
 
   Future<void> initPlatformState() async {
@@ -225,7 +225,7 @@ class _LoginDemoState extends State<LoginDemo> {
                   onPressed: () {
                     flutterPushProfile();
                     Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => HomePage()));
+                        context, MaterialPageRoute(builder: (_) => Page1()));
                   },
                   child: Text(
                     'pushProfile',
