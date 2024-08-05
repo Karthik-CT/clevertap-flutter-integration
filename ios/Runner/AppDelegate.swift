@@ -7,6 +7,7 @@ import clevertap_plugin
 @objc class AppDelegate: FlutterAppDelegate, CleverTapPushNotificationDelegate {
     
     var flutterViewController: FlutterViewController!;
+    private let CHANNEL = "com.example.app/launchURL"
     
     override func application(
         _ application: UIApplication,
@@ -15,12 +16,32 @@ import clevertap_plugin
         GeneratedPluginRegistrant.register(with: self)
         
         flutterViewController = window?.rootViewController as? FlutterViewController
-        
+        let channel = FlutterMethodChannel(name: CHANNEL, binaryMessenger: controller.binaryMessenger)
+
         CleverTap.autoIntegrate()
         
         CleverTap.setDebugLevel(CleverTapLogLevel.debug.rawValue)
         
         registerForPush()
+
+        channel.setMethodCallHandler { (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
+              if call.method == "launchURL" {
+                if let args = call.arguments as? [String: Any],
+                   let urlString = args["url"] as? String,
+                   let url = URL(string: urlString) {
+                  if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    result(true)
+                  } else {
+                    result(false)
+                  }
+                } else {
+                  result(false)
+                }
+              } else {
+                result(FlutterMethodNotImplemented)
+              }
+            }
         
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }

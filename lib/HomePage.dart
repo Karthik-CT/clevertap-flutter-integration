@@ -1,5 +1,6 @@
 // ignore_for_file:  unnecessary_this
 import 'dart:convert';
+import 'package:clevertap_flutter_integration/CustomAppInbox.dart';
 import 'package:clevertap_flutter_integration/Page1.dart';
 import 'package:clevertap_plugin/src/typedefs.dart';
 import 'package:flutter/material.dart';
@@ -244,6 +245,18 @@ class _MyHomePageState extends State<MyHomePage> {
       key: globalKey,
       appBar: AppBar(
         title: Text(widget.title),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.notifications),
+            onPressed: () {
+              // Handle the bell icon press action here
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => InboxScreen()),
+              );
+            },
+          ),
+        ],
       ),
       body: Center(
         child: Column(
