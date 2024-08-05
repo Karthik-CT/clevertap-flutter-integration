@@ -64,7 +64,14 @@ class _InboxScreenState extends State<InboxScreen> {
     print("inside getFirstInboxMessageId");
     Map<dynamic, dynamic> itemFirst = messageList?[0];
     print("itemFirst.toString(): $itemFirst");
-    var msg_id = itemFirst["id"];
+    var msg_id = "";
+    if (Platform.isAndroid){
+      msg_id = itemFirst["id"];
+      print("msg_id_getMessageIDForInbox_Android: $msg_id");
+    } else if (Platform.isIOS) {
+      msg_id = itemFirst["_id"];
+      print("msg_id_getMessageIDForInbox_IOS: $msg_id");
+    }
     return msg_id;
   }
 
@@ -147,7 +154,7 @@ class _InboxScreenState extends State<InboxScreen> {
       print('iOS Deep Link: $deepLinkIOS');
       String deepLinkSplit = deepLinkIOS.split('/').last;
       print("App Inbox -> $deepLinkSplit ");
-      if (deepLinkSplit == "page1") {
+      if (deepLinkSplit == "pag1") {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => Page1()),

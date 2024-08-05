@@ -16,6 +16,8 @@ import clevertap_plugin
         GeneratedPluginRegistrant.register(with: self)
         
         flutterViewController = window?.rootViewController as? FlutterViewController
+        
+        let controller = window?.rootViewController as! FlutterViewController
         let channel = FlutterMethodChannel(name: CHANNEL, binaryMessenger: controller.binaryMessenger)
 
         CleverTap.autoIntegrate()
