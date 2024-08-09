@@ -2,16 +2,17 @@
 import 'dart:convert';
 import 'package:clevertap_flutter_integration/CustomAppInbox.dart';
 import 'package:clevertap_flutter_integration/Page1.dart';
-import 'package:clevertap_plugin/src/typedefs.dart';
 import 'package:flutter/material.dart';
 import 'package:clevertap_plugin/clevertap_plugin.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'dart:io' show Platform;
+
 // import 'package:intl/intl.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
-
-GlobalKey globalKey = GlobalKey();
+import 'package:url_launcher/url_launcher.dart';
+import 'package:uni_links/uni_links.dart';
+import 'main.dart';
 
 bool navigatingFromInbox = false;
 
@@ -102,13 +103,6 @@ class _MyHomePageState extends State<MyHomePage> {
         "notificationsound1.mp3");
 
     CleverTapPlugin.initializeInbox();
-
-    customAppInbox();
-  }
-
-  void customAppInbox() async {
-    List? messages = await CleverTapPlugin.getAllInboxMessages();
-    print("Custom App Inbox -> $messages");
   }
 
   Future<void> initPlatformState() async {
@@ -139,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void inboxNotificationMessageClicked(
       Map<String, dynamic>? data, int contentPageIndex, int buttonIndex) {
-    this.setState(() {
+    this.setState(() async {
       print("App Inbox -> "
               "inboxNotificationMessageClicked called = InboxItemClicked at page-index "
               "$contentPageIndex with button-index $buttonIndex" +
@@ -161,25 +155,17 @@ class _MyHomePageState extends State<MyHomePage> {
         }
       }
       print("App Inbox -> $deepLink ");
+
       String deepLinkSplit = deepLink.split('/').last;
       print("App Inbox -> $deepLinkSplit ");
+
+      // Using URL_LAUNCHER dependency of flutter to navigate to the project
       if (deepLinkSplit == "page1") {
-        // Ensuring the widget is still mounted before navigating
-        if (mounted) {
-          print("App Inbox -> Navigating to Page1");
-          // Dismiss the inbox and then navigate
-          CleverTapPlugin.dismissInbox().then((_) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Page1()),
-            ).then((_) {
-              print("App Inbox -> Navigation complete");
-              showToast("App Inbox -> Navigated");
-            });
-          });
-        } else {
-          print("App Inbox -> Widget not mounted, navigation aborted");
-        }
+        if (await canLaunchUrl(Uri.parse(deepLink))) {
+          print("canLaunchURL is called");
+          launchUrl(Uri.parse(deepLink), mode: LaunchMode.inAppWebView);
+        } else
+          print("Can't launch");
       }
     });
   }
@@ -242,7 +228,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: globalKey,
+      // key: globalKey,
       appBar: AppBar(
         title: Text(widget.title),
         actions: [
@@ -399,10 +385,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void cleverTapND() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Page1()),
-    );
 
     print("Debug Test");
     this.setState(() async {
@@ -425,29 +407,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var title = notificationPayload["nt"];
     var message = notificationPayload["nm"];
 
-    // if (type != null) {
-    //   Navigator.push(
-    //       context,
-    //       MaterialPageRoute(
-    //           builder: (context) =>
-    //               DeepLinkPage(type: type, title: title, message: message)));
-    // }
-
     print(
         "_handleKilledStateNotificationInteraction => Type: $type, Title: $title, Message: $message ");
   }
 }
-
-// class Page1 extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text('Page 1'),
-//       ),
-//       body: Center(
-//         child: Text('Welcome to Page 1'),
-//       ),
-//     );
-//   }
-// }

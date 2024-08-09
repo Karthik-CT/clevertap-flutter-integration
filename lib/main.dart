@@ -4,14 +4,7 @@ import 'package:clevertap_flutter_integration/Page1.dart';
 import 'package:clevertap_plugin/clevertap_plugin.dart';
 import 'package:flutter/material.dart';
 import 'HomePage.dart';
-import 'dart:convert';
-import 'package:flutter/material.dart';
-// import 'package:clevertap_plugin/clevertap_plugin.dart';
-import 'package:flutter/services.dart';
-import 'package:intl/intl.dart';
-import 'dart:io' show Platform;
-// import 'package:intl/intl.dart';
-import 'package:flutter_styled_toast/flutter_styled_toast.dart';
+import 'Page1.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,9 +14,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginDemo(),
+      onGenerateRoute: _onGenerateRoute,
     );
+  }
+
+  //Create Routes of your app
+  Route<dynamic>? _onGenerateRoute(RouteSettings settings) {
+    print("Route: " + settings.toString());
+    switch (settings.name) {
+      case '/':
+        return MaterialPageRoute(builder: (context) => LoginDemo());
+      case 'page1':
+        return MaterialPageRoute(builder: (context) => Page1());
+      default:
+        return MaterialPageRoute(builder: (context) => MyHomePage(title: 'Flutter SDK Integration'));
+    }
   }
 }
 
@@ -61,26 +66,6 @@ class _LoginDemoState extends State<LoginDemo> {
     print("CTID: ${CleverTapPlugin.getCleverTapID().toString()}");
     //for killed state notification clicked callback
     _handleKilledStateNotificationInteraction();
-    // CleverTapPlugin.createNotificationChannel(
-    //     "testkk123", "Test Notification Flutter", "Flutter Test", 5, true);
-    // CleverTapPlugin.createNotificationChannelWithSound(
-    //     "testkk123",
-    //     "Test Notification Flutter",
-    //     "Flutter Test",
-    //     5,
-    //     true,
-    //     "notificationsound1.mp3");
-
-    // CleverTapPlugin.onUserLogin({
-    //   'Name': "testingflutter1",
-    //   'Identity': "testingflutter1",
-    //   'Email': "testingflutter1@flutter.com",
-    //   'Phone': "+918811111111",
-    //   'MSG-email': true,
-    //   'MSG-push': true,
-    //   'MSG-sms': true,
-    //   'MSG-whatsapp': true,
-    // });
   }
 
   Future<void> initPlatformState() async {
@@ -202,8 +187,8 @@ class _LoginDemoState extends State<LoginDemo> {
                 child: TextButton(
                   onPressed: () {
                     flutterOnUserLogin();
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => HomePage()));
+                    Navigator.pushNamed(context, '/homepage');
+                    // Navigator.push(context, MaterialPageRoute(builder: (_) => HomePage()));
                   },
                   child: Text(
                     'onUserLogin',
@@ -224,8 +209,6 @@ class _LoginDemoState extends State<LoginDemo> {
                 child: TextButton(
                   onPressed: () {
                     flutterPushProfile();
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => Page1()));
                   },
                   child: Text(
                     'pushProfile',
@@ -244,14 +227,6 @@ class _LoginDemoState extends State<LoginDemo> {
     var type = notificationPayload["type"];
     var title = notificationPayload["nt"];
     var message = notificationPayload["nm"];
-
-    // if (type != null) {
-    //   Navigator.push(
-    //       context,
-    //       MaterialPageRoute(
-    //           builder: (context) =>
-    //               DeepLinkPage(type: type, title: title, message: message)));
-    // }
 
     print(
         "_handleKilledStateNotificationInteraction => Type: $type, Title: $title, Message: $message ");
