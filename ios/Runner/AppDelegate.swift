@@ -7,7 +7,9 @@ import clevertap_plugin
 @objc class AppDelegate: FlutterAppDelegate, CleverTapPushNotificationDelegate {
     
     var flutterViewController: FlutterViewController!;
-    private let CHANNEL = "com.example.app/launchURL"
+    private let CHANNEL = "customAppInbox"
+    private let APPGROUPSCHANNEL = "storeValuesInAppGroups"
+    private let appGroupId = "group.clevertapTest"
     
     override func application(
         _ application: UIApplication,
@@ -19,34 +21,65 @@ import clevertap_plugin
         
         let controller = window?.rootViewController as! FlutterViewController
         let channel = FlutterMethodChannel(name: CHANNEL, binaryMessenger: controller.binaryMessenger)
-
+        let appGroupsChannel = FlutterMethodChannel(name: APPGROUPSCHANNEL, binaryMessenger: controller.binaryMessenger)
+        
         CleverTap.autoIntegrate()
         
         CleverTap.setDebugLevel(CleverTapLogLevel.debug.rawValue)
         
         registerForPush()
-
+        
         channel.setMethodCallHandler { (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
-              if call.method == "launchURL" {
+            if call.method == "launchURL" {
                 if let args = call.arguments as? [String: Any],
                    let urlString = args["url"] as? String,
                    let url = URL(string: urlString) {
-                  if UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                    result(true)
-                  } else {
-                    result(false)
-                  }
+                    if UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        result(true)
+                    } else {
+                        result(false)
+                    }
                 } else {
-                  result(false)
+                    result(false)
                 }
-              } else {
+            } else {
                 result(FlutterMethodNotImplemented)
-              }
             }
+        }
+        
+        appGroupsChannel.setMethodCallHandler { [weak self] (call, result) in
+            guard let self = self else { return }
+            
+            switch call.method {
+            case "saveUserInfo":
+                if let args = call.arguments as? [String: String] {
+                    self.saveUserInfo(args)
+                    result(nil)
+                } else {
+                    result(FlutterError(code: "INVALID_ARGUMENTS", message: "Invalid arguments for saveUserInfo", details: nil))
+                }
+                
+            default:
+                result(FlutterMethodNotImplemented)
+            }
+        }
+        
+        
+        let defaults = UserDefaults.init(suiteName: "group.clevertapTest")
+        let dartEmailId = defaults?.value(forKey: "userEmail") as? String
+        print("From dart to iOS EmailID: \(String(describing: dartEmailId))")
         
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
+    
+    private func saveUserInfo(_ userInfo: [String: String]) {
+        let defaults = UserDefaults(suiteName: appGroupId)
+        defaults?.set(userInfo["userName"], forKey: "userName")
+        defaults?.set(userInfo["userEmail"], forKey: "userEmail")
+        defaults?.set(userInfo["userMobile"], forKey: "userMobile")
+        defaults?.set(userInfo["userEmail"], forKey: "userEmail")
+      }
     
     func registerForPush() {
         // register category with actions
@@ -99,6 +132,6 @@ import clevertap_plugin
     func pushNotificationTapped(withCustomExtras customExtras: [AnyHashable : Any]!) {
         print("Push Notification Tapped with Custom Extras: \(customExtras)");
     }
-
+    
     
 }

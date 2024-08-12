@@ -23,10 +23,12 @@ class NotificationService: CTNotificationServiceExtension {
         let userMobNo = defaults?.value(forKey: "userMobileNumber")
         print("From Notification Service EmailID: \(String(describing: emailId))")
         
-        let props = [
-            "emailId": emailId,
-            "userId": userId,
-            "userMobNo": userMobNo
+        let dartEmailId = defaults?.value(forKey: "userEmail") as? String
+        print("From dart to iOS EmailID: \(String(describing: dartEmailId))")
+        
+        
+        let props: Dictionary<String, Any> = [
+            "dartEmailId": dartEmailId
         ]
         
         CleverTap.sharedInstance()?.recordEvent("NotificationServiceEventForPushImpression", withProps: props)

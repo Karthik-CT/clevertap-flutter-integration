@@ -29,7 +29,7 @@ import androidx.annotation.NonNull
 
 class MainActivity: FlutterActivity() {
     var cleverTapDefaultInstance: CleverTapAPI? = null
-    private val CHANNEL = "com.example.app/launchURL"
+    private val CHANNEL = "customAppInbox"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

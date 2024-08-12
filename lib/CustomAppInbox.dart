@@ -24,7 +24,7 @@ class InboxScreen extends StatefulWidget {
 
 class _InboxScreenState extends State<InboxScreen> {
   List<Map<String, dynamic>> inboxMessages = [];
-  static const platform = MethodChannel('com.example.app/launchURL');
+  static const platform = MethodChannel('customAppInbox');
 
   @override
   void initState() {

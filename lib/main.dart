@@ -3,6 +3,7 @@
 import 'package:clevertap_flutter_integration/Page1.dart';
 import 'package:clevertap_plugin/clevertap_plugin.dart';
 import 'package:flutter/material.dart';
+import 'AppGroupManager.dart';
 import 'HomePage.dart';
 import 'Page1.dart';
 
@@ -66,7 +67,7 @@ class _LoginDemoState extends State<LoginDemo> {
     print("CTID: ${CleverTapPlugin.getCleverTapID().toString()}");
     //for killed state notification clicked callback
     _handleKilledStateNotificationInteraction();
-  }
+}
 
   Future<void> initPlatformState() async {
     if (!mounted) return;
@@ -83,6 +84,13 @@ class _LoginDemoState extends State<LoginDemo> {
       'MSG-sms': true,
       'MSG-whatsapp': true,
     });
+
+    AppGroupManager.saveUserInfo(
+      name: nameController.text,
+      email: emailController.text,
+      mobile: mobController.text,
+      identity: identityController.text,
+    );
   }
 
   void flutterPushProfile() {

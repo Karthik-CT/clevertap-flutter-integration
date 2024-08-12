@@ -10,6 +10,15 @@ PODS:
   - SDWebImage (5.19.4):
     - SDWebImage/Core (= 5.19.4)
   - SDWebImage/Core (5.19.4)
+  - shared_preference_app_group (1.0.0):
+    - Flutter
+  - shared_preferences_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - uni_links (0.0.1):
+    - Flutter
+  - url_launcher_ios (0.0.1):
+    - Flutter
 
 DEPENDENCIES:
   - CleverTap-iOS-SDK (= 6.2.1)
@@ -17,6 +26,10 @@ DEPENDENCIES:
   - CTNotificationContent
   - CTNotificationService
   - Flutter (from `Flutter`)
+  - shared_preference_app_group (from `.symlinks/plugins/shared_preference_app_group/ios`)
+  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
+  - uni_links (from `.symlinks/plugins/uni_links/ios`)
+  - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
 
 SPEC REPOS:
   trunk:
@@ -30,6 +43,14 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/clevertap_plugin/ios"
   Flutter:
     :path: Flutter
+  shared_preference_app_group:
+    :path: ".symlinks/plugins/shared_preference_app_group/ios"
+  shared_preferences_foundation:
+    :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
+  uni_links:
+    :path: ".symlinks/plugins/uni_links/ios"
+  url_launcher_ios:
+    :path: ".symlinks/plugins/url_launcher_ios/ios"
 
 SPEC CHECKSUMS:
   CleverTap-iOS-SDK: 78ea6d752d84918f0426f7b3959777d862bcb348
@@ -38,6 +59,10 @@ SPEC CHECKSUMS:
   CTNotificationService: 3eceea27cf0e28a2e14267bb706013363eb620c6
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   SDWebImage: 066c47b573f408f18caa467d71deace7c0f8280d
+  shared_preference_app_group: 46aee3873e1da581d4904bece9876596d7f66725
+  shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
+  uni_links: d97da20c7701486ba192624d99bffaaffcfc298a
+  url_launcher_ios: 5334b05cef931de560670eeae103fd3e431ac3fe
 
 PODFILE CHECKSUM: ee62b8554df43e967ef4ae51f2e0a0f5648c6ed3
 

@@ -9,6 +9,8 @@
 		<string>applinks:integrationsdk-test.web.app</string>
 	</array>
 	<key>com.apple.security.application-groups</key>
-	<array/>
+	<array>
+		<string>group.clevertapTest</string>
+	</array>
 </dict>
 </plist>
