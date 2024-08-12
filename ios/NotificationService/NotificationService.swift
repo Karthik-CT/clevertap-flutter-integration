@@ -18,17 +18,15 @@ class NotificationService: CTNotificationServiceExtension {
         CleverTap.setDebugLevel(CleverTapLogLevel.debug.rawValue)
         
         let defaults = UserDefaults.init(suiteName: "group.clevertapTest")
-        let emailId = defaults?.value(forKey: "userEmailID") as? String
-        let userId = defaults?.value(forKey: "userIdentity")
-        let userMobNo = defaults?.value(forKey: "userMobileNumber")
-        print("From Notification Service EmailID: \(String(describing: emailId))")
-        
-        let dartEmailId = defaults?.value(forKey: "userEmail") as? String
-        print("From dart to iOS EmailID: \(String(describing: dartEmailId))")
+        let emailId = defaults?.value(forKey: "userEmail") as? String
+        let userId = defaults?.value(forKey: "userIdentity") as? String
+        let userMobNo = defaults?.value(forKey: "userMobile") as? String
+        let userName = defaults?.value(forKey: "userName") as? String
+        print("From dart to iOS EmailID: \(String(describing: emailId))")
         
         
         let props: Dictionary<String, Any> = [
-            "dartEmailId": dartEmailId
+            "emailId": emailId
         ]
         
         CleverTap.sharedInstance()?.recordEvent("NotificationServiceEventForPushImpression", withProps: props)
