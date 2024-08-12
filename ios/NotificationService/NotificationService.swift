@@ -40,12 +40,9 @@ class NotificationService: CTNotificationServiceExtension {
             CleverTap.sharedInstance()?.onUserLogin(profile)
         }
         
-        //        let profile: Dictionary<String, Any> = [
-        //            "Identity": "ioskk2",
-        //            "Email": "ioskk2@test.com",]
-        //        CleverTap.sharedInstance()?.onUserLogin(profile)
-        // call to record the Notification viewed
+        // call to record the push impressions event
         CleverTap.sharedInstance()?.recordNotificationViewedEvent(withData:request.content.userInfo)
+        
         super.didReceive(request, withContentHandler: contentHandler)
     }
     
