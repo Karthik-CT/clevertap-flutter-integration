@@ -27,6 +27,10 @@ class MyApp extends StatelessWidget {
         return MaterialPageRoute(builder: (context) => LoginDemo());
       case 'page1':
         return MaterialPageRoute(builder: (context) => Page1());
+      case 'karthikdl://page1?isinbox=true':
+        return MaterialPageRoute(builder: (context) => Page1());
+      case 'karthikdl://page1':
+        return MaterialPageRoute(builder: (context) => Page1());
       default:
         return MaterialPageRoute(builder: (context) => MyHomePage(title: 'Flutter SDK Integration'));
     }

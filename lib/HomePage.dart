@@ -10,9 +10,11 @@ import 'dart:io' show Platform;
 
 // import 'package:intl/intl.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:uni_links/uni_links.dart';
 import 'main.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 bool navigatingFromInbox = false;
 
@@ -55,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController pushEventController = TextEditingController();
 
   static const notificationTapChannel = MethodChannel("notificationTapChannel");
+  static const androidSharedPrefs = MethodChannel("android_shared_preferences");
 
   //push notification clicked callback in killed state
   void _handleKilledStateNotificationInteraction() async {
@@ -167,6 +170,26 @@ class _MyHomePageState extends State<MyHomePage> {
         } else
           print("Can't launch");
       }
+
+      if (Platform.isAndroid) {
+        Fluttertoast.showToast(
+            msg: "Android Says: App Inbox Clicked",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.CENTER,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.red,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      } else if (Platform.isIOS) {
+        Fluttertoast.showToast(
+            msg: "iOS Says: App Inbox Clicked",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.CENTER,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.red,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      }
     });
   }
 
@@ -225,8 +248,23 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  Future<void> getPreferences() async {
+    try {
+      // Call the method and await the result
+      final Map<dynamic, dynamic> prefs = await androidSharedPrefs.invokeMethod('getPreferences');
+      print("******* PREFS *******: $prefs");
+      prefs.forEach((key, value) {
+        print('$key: $value');
+      });
+    } on PlatformException catch (e) {
+      print("Failed to get preferences: '${e.message}'.");
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
+    getPreferences();
     return Scaffold(
       // key: globalKey,
       appBar: AppBar(
@@ -299,7 +337,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: ListTile(
                   title: Text("Show Inbox with sections"),
                   subtitle: Text("Opens App Inbox with tabs"),
-                  onTap: appInboxWithSections,
+                  onTap: getPreferences,
                 ),
               ),
             ),
@@ -385,7 +423,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void cleverTapND() {
-
     print("Debug Test");
     this.setState(() async {
       List? displayUnits = await CleverTapPlugin.getAllDisplayUnits();

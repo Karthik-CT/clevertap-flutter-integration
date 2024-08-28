@@ -11,6 +11,7 @@ import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 import kotlinx.coroutines.android.awaitFrame
+import android.net.Uri
 
 class FlutterScreenActivity : FlutterActivity() {
 
@@ -24,6 +25,14 @@ class FlutterScreenActivity : FlutterActivity() {
 
     //Intial route is used to navigate to the page
     override fun getInitialRoute(): String? {
-        return "page1"
+        val action = intent.action
+        val data: Uri? = intent.data
+
+        if (intent.hasExtra("wzrk_pn")) {
+            return "$data"
+        } else {
+            return "$data?isinbox=true"
+        }
+//        return "page1"
     }
 }

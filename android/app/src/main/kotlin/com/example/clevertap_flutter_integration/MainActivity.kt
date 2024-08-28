@@ -27,14 +27,24 @@ import io.flutter.plugin.common.MethodChannel
 import android.net.Uri
 import androidx.annotation.NonNull
 
-class MainActivity: FlutterActivity() {
+class MainActivity : FlutterActivity() {
     var cleverTapDefaultInstance: CleverTapAPI? = null
     private val CHANNEL = "customAppInbox"
+    private val ANDROID_SP_CHANNEL = "android_shared_preferences"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         cleverTapDefaultInstance = CleverTapAPI.getDefaultInstance(applicationContext)
+
+//        val preferences = applicationContext.getSharedPreferences("WizRocket", MODE_PRIVATE)
+//        val allEntries = preferences.all
+//        for ((key, value) in allEntries) {
+//            Log.d("SharedPreferences", "$key: $value")
+//        }
+
+
+
     }
 
     override fun onNewIntent(intent: Intent) {
@@ -44,15 +54,18 @@ class MainActivity: FlutterActivity() {
             cleverTapDefaultInstance?.pushNotificationClickedEvent(intent!!.extras)
         }
 
-       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-           NotificationUtils.dismissNotification(intent, applicationContext)
-       }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            NotificationUtils.dismissNotification(intent, applicationContext)
+        }
     }
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
 
-        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL).setMethodCallHandler { call, result ->
+        MethodChannel(
+            flutterEngine.dartExecutor.binaryMessenger,
+            CHANNEL
+        ).setMethodCallHandler { call, result ->
             if (call.method == "launchURL") {
                 val url = call.argument<String>("url")
                 if (url != null) {
@@ -71,6 +84,34 @@ class MainActivity: FlutterActivity() {
                 result.notImplemented()
             }
         }
+
+        val preferences = applicationContext.getSharedPreferences("WizRocket", MODE_PRIVATE)
+        val editor = preferences.edit()
+        editor.putString("sample_key", "sample_value")
+        editor.putInt("sample_int", 42)
+        editor.apply()
+
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, ANDROID_SP_CHANNEL).setMethodCallHandler { call, result ->
+            if (call.method == "getPreferences") {
+                val preferences = applicationContext.getSharedPreferences("WizRocket", MODE_PRIVATE)
+                val allEntries: Map<String, *> = preferences.all
+
+                // Log the entries to confirm they exist
+                for ((key, value) in allEntries) {
+                    Log.d("SharedPreferences Android:", "$key: $value")
+                }
+
+                // Pass data to Flutter
+                val prefsMap = HashMap<String, Any?>()
+                for ((key, value) in allEntries) {
+                    prefsMap[key] = value
+                }
+                result.success(prefsMap)
+            } else {
+                result.notImplemented()
+            }
+        }
+
     }
 
     override fun onResume() {
@@ -91,7 +132,7 @@ class MainActivity: FlutterActivity() {
 object NotificationUtils {
 
     //Require to close notification on action button click
-    fun dismissNotification(intent: Intent?, applicationContext: Context){
+    fun dismissNotification(intent: Intent?, applicationContext: Context) {
         intent?.extras?.apply {
             var autoCancel = true
             var notificationId = -1
@@ -106,7 +147,8 @@ object NotificationUtils {
              * if pt_dismiss_on_click is false in InputBox template payload. Alternatively if normal
              * notification is raised then we dismiss notification.
              */
-            val ptDismissOnClick = intent.extras!!.getString(PTConstants.PT_DISMISS_ON_CLICK,"")
+            val ptDismissOnClick =
+                intent.extras!!.getString(PTConstants.PT_DISMISS_ON_CLICK, "")
 
             if (autoCancel && notificationId > -1 && ptDismissOnClick.isNullOrEmpty()) {
                 val notifyMgr: NotificationManager =
