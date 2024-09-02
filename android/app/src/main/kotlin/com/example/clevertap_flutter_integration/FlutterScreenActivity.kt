@@ -17,6 +17,7 @@ class FlutterScreenActivity : FlutterActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        println("FlutterScreenActivity is called")
     }
 
     override fun getDartEntrypointFunctionName(): String {
