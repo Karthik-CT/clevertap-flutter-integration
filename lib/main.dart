@@ -1,5 +1,72 @@
 // ignore_for_file: prefer_const_constructors
 
+// import 'dart:convert';
+//
+// import 'package:clevertap_flutter_integration/Page1.dart';
+// import 'package:clevertap_plugin/clevertap_plugin.dart';
+// import 'package:flutter/material.dart';
+// import 'AppGroupManager.dart';
+// import 'HomePage.dart';
+// import 'Page1.dart';
+//
+// final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+//
+// final int TEST_RUN_APP_DELAY = 0;
+// final int CLEVERTAP_LISTENER_ATTACH_DELAY = 0;
+//
+// @pragma('vm:entry-point')
+// void onKilledStateNotificationClickedHandler(Map<String, dynamic> map) async {
+//   print("onKilledStateNotificationClickedHandler called from headless task!");
+//   print("Notification Payload received: " + map.toString());
+// }
+//
+// void main() {
+//   print("CleverTapPlugin main pre ensure");
+//   WidgetsFlutterBinding.ensureInitialized();
+//   CleverTapPlugin.onKilledStateNotificationClicked(
+//       onKilledStateNotificationClickedHandler);
+//
+//   print("CleverTapPlugin main pre runapp");
+//
+//   Future.delayed(Duration(seconds: TEST_RUN_APP_DELAY), () {
+//     runApp(MaterialApp(
+//       navigatorKey: navigatorKey,
+//       title: 'Loginn Page',
+//       home: MyApp(),
+//     ));
+//     print("CleverTapPlugin main POSTTT runapp");
+//   });
+//   // runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       onGenerateRoute: _onGenerateRoute,
+//     );
+//   }
+//
+//   //Create Routes of your app
+//   Route<dynamic>? _onGenerateRoute(RouteSettings settings) {
+//     print("Route: " + settings.toString());
+//     switch (settings.name) {
+//       case '/':
+//         return MaterialPageRoute(builder: (context) => LoginDemo());
+//       case 'page1':
+//         return MaterialPageRoute(builder: (context) => Page1());
+//       case 'karthikdl://page1?isinbox=true':
+//         return MaterialPageRoute(builder: (context) => Page1());
+//       case 'karthikdl://page1':
+//         return MaterialPageRoute(builder: (context) => Page1());
+//       default:
+//         return MaterialPageRoute(
+//             builder: (context) => MyHomePage(title: 'Flutter SDK Integration'));
+//     }
+//   }
+// }
+
+import 'dart:convert';
 import 'package:clevertap_flutter_integration/Page1.dart';
 import 'package:clevertap_plugin/clevertap_plugin.dart';
 import 'package:flutter/material.dart';
@@ -7,8 +74,63 @@ import 'AppGroupManager.dart';
 import 'HomePage.dart';
 import 'Page1.dart';
 
-void main() {
-  runApp(MyApp());
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
+final int TEST_RUN_APP_DELAY = 0;
+final int CLEVERTAP_LISTENER_ATTACH_DELAY = 0;
+
+@pragma('vm:entry-point')
+void onKilledStateNotificationClickedHandler(Map<String, dynamic> map) async {
+  print("onKilledStateNotificationClickedHandler called from headless task!");
+  print("Notification Payload received: " + map.toString());
+
+  // Display alert in the app
+  displayAlert(
+    title: "Notification Clicked",
+    message: "Payload: ${jsonEncode(map)}",
+  );
+}
+
+void displayAlert({required String title, required String message}) {
+  final context = navigatorKey.currentContext;
+  if (context != null) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(title),
+          content: Text(message),
+          actions: <Widget>[
+            TextButton(
+              child: Text("OK"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  } else {
+    print("Unable to show alert. Context is null.");
+  }
+}
+
+void main() async {
+  print("CleverTapPlugin main pre ensure");
+  WidgetsFlutterBinding.ensureInitialized();
+  CleverTapPlugin.onKilledStateNotificationClicked(onKilledStateNotificationClickedHandler);
+
+  print("CleverTapPlugin main pre runapp");
+
+  Future.delayed(Duration(seconds: TEST_RUN_APP_DELAY), () {
+    runApp(MaterialApp(
+      navigatorKey: navigatorKey,
+      title: 'Loginn Page',
+      home: MyApp(),
+    ));
+    print("CleverTapPlugin main POSTTT runapp");
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +141,6 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  //Create Routes of your app
   Route<dynamic>? _onGenerateRoute(RouteSettings settings) {
     print("Route: " + settings.toString());
     switch (settings.name) {
@@ -32,7 +153,8 @@ class MyApp extends StatelessWidget {
       case 'karthikdl://page1':
         return MaterialPageRoute(builder: (context) => Page1());
       default:
-        return MaterialPageRoute(builder: (context) => MyHomePage(title: 'Flutter SDK Integration'));
+        return MaterialPageRoute(
+            builder: (context) => MyHomePage(title: 'Flutter SDK Integration'));
     }
   }
 }
@@ -68,10 +190,34 @@ class _LoginDemoState extends State<LoginDemo> {
     super.initState();
     CleverTapPlugin.setDebugLevel(3);
     initPlatformState();
+    activateCleverTapFlutterPluginHandlers();
     print("CTID: ${CleverTapPlugin.getCleverTapID().toString()}");
     //for killed state notification clicked callback
     _handleKilledStateNotificationInteraction();
-}
+  }
+
+  void activateCleverTapFlutterPluginHandlers() {
+    print("Activate Flutter is called");
+    _clevertapPlugin = CleverTapPlugin();
+
+    //Handler for receiving Push Clicked Payload in FG and BG state
+    _clevertapPlugin.setCleverTapPushClickedPayloadReceivedHandler(
+        pushClickedPayloadReceived);
+  }
+
+  //For Push Notification Clicked Payload in FG and BG state
+  void pushClickedPayloadReceived(Map<String, dynamic> map) {
+    print("pushClickedPayloadReceived called");
+    this.setState(() async {
+      var data = jsonEncode(map);
+      print("on Push Click Payload = $data");
+      displayAlert(
+        title: "Notification Clicked",
+        message: "Payload: ${jsonEncode(map)}",
+      );
+      CleverTapPlugin.recordEvent("on_push_click_payload_event", map);
+    });
+  }
 
   Future<void> initPlatformState() async {
     if (!mounted) return;

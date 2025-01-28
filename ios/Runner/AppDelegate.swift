@@ -3,7 +3,7 @@ import Flutter
 import CleverTapSDK
 import clevertap_plugin
 
-@UIApplicationMain
+@main
 @objc class AppDelegate: FlutterAppDelegate, CleverTapPushNotificationDelegate {
     
     var flutterViewController: FlutterViewController!;
@@ -24,6 +24,8 @@ import clevertap_plugin
         let appGroupsChannel = FlutterMethodChannel(name: APPGROUPSCHANNEL, binaryMessenger: controller.binaryMessenger)
         
         CleverTap.autoIntegrate()
+        
+        CleverTapPlugin.sharedInstance().applicationDidLaunch(options: launchOptions)
         
         CleverTap.setDebugLevel(CleverTapLogLevel.debug.rawValue)
         
