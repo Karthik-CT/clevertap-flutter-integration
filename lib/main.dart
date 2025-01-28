@@ -9,7 +9,6 @@ import 'HomePage.dart';
 import 'Page1.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-
 final int TEST_RUN_APP_DELAY = 0;
 final int CLEVERTAP_LISTENER_ATTACH_DELAY = 0;
 
