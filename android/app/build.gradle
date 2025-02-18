@@ -1,3 +1,9 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'dev.flutter.flutter-gradle-plugin'
+    id 'com.google.gms.google-services'
+}
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
@@ -21,14 +27,9 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'com.google.gms.google-services'
-apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
-
 android {
     compileSdkVersion 34
-    ndkVersion flutter.ndkVersion
+    ndkVersion '27.0.12077973'
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -68,7 +69,8 @@ flutter {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    def kotlinVersion = '1.9.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
 
 
     implementation 'com.clevertap.android:clevertap-android-sdk:7.0.3'
