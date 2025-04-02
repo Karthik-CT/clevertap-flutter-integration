@@ -28,7 +28,8 @@ if (flutterVersionName == null) {
 }
 
 android {
-    compileSdkVersion 34
+    namespace "com.example.clevertap_flutter_integration"
+    compileSdkVersion 35
     ndkVersion '27.0.12077973'
 
     compileOptions {

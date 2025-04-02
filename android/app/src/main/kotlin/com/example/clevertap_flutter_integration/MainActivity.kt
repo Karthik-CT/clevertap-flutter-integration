@@ -1,5 +1,6 @@
 package com.example.clevertap_flutter_integration
 
+import android.annotation.SuppressLint
 import android.app.NotificationManager
 import io.flutter.embedding.android.FlutterActivity
 import android.content.Context
@@ -7,13 +8,13 @@ import android.os.Bundle
 import com.clevertap.android.sdk.ActivityLifecycleCallback
 import com.clevertap.android.sdk.CleverTapAPI
 import com.clevertap.android.sdk.pushnotification.CTPushNotificationListener
-import io.flutter.app.FlutterApplication
+//import io.flutter.app.FlutterApplication
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.dart.DartExecutor
 import io.flutter.plugin.common.PluginRegistry
-import io.flutter.plugin.common.PluginRegistry.PluginRegistrantCallback
+//import io.flutter.plugin.common.PluginRegistry.PluginRegistrantCallback
 //import io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService
-import io.flutter.view.FlutterMain
+//import io.flutter.view.FlutterMain
 import java.util.*
 import android.util.Log
 import com.clevertap.android.sdk.inapp.CTLocalInApp
@@ -26,6 +27,7 @@ import com.clevertap.android.sdk.CTInboxStyleConfig
 import io.flutter.plugin.common.MethodChannel
 import android.net.Uri
 import androidx.annotation.NonNull
+import io.flutter.plugins.GeneratedPluginRegistrant
 
 class MainActivity : FlutterActivity() {
     var cleverTapDefaultInstance: CleverTapAPI? = null
@@ -59,9 +61,10 @@ class MainActivity : FlutterActivity() {
         }
     }
 
+    @SuppressLint("LongLogTag")
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
-
+        GeneratedPluginRegistrant.registerWith(flutterEngine)
         MethodChannel(
             flutterEngine.dartExecutor.binaryMessenger,
             CHANNEL
@@ -70,7 +73,10 @@ class MainActivity : FlutterActivity() {
                 val url = call.argument<String>("url")
                 if (url != null) {
                     try {
-                        val intent = Intent(Intent.ACTION_VIEW)
+                        val intent = Intent(Intent.ACTION_VIEW).setClassName(
+                            packageName,
+                            "com.example.clevertap_flutter_integration.MainActivity"
+                        )
                         intent.data = Uri.parse(url)
                         startActivity(intent)
                         result.success(true)
@@ -117,15 +123,15 @@ class MainActivity : FlutterActivity() {
     override fun onResume() {
         super.onResume()
 
-        val builder = CTLocalInApp.builder()
-            .setInAppType(CTLocalInApp.InAppType.ALERT)
-            .setTitleText("Get Notified")
-            .setMessageText("Enable Notification permission")
-            .followDeviceOrientation(true)
-            .setPositiveBtnText("Allow")
-            .setNegativeBtnText("Cancel")
-            .build()
-        cleverTapDefaultInstance?.promptPushPrimer(builder)
+//        val builder = CTLocalInApp.builder()
+//            .setInAppType(CTLocalInApp.InAppType.ALERT)
+//            .setTitleText("Get Notified")
+//            .setMessageText("Enable Notification permission")
+//            .followDeviceOrientation(true)
+//            .setPositiveBtnText("Allow")
+//            .setNegativeBtnText("Cancel")
+//            .build()
+//        cleverTapDefaultInstance?.promptPushPrimer(builder)
     }
 }
 

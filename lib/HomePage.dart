@@ -10,9 +10,9 @@ import 'dart:io' show Platform;
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:uni_links/uni_links.dart';
+// import 'package:uni_links/uni_links.dart';
 import 'main.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+// import 'package:fluttertoast/fluttertoast.dart';
 
 bool navigatingFromInbox = false;
 
@@ -169,25 +169,25 @@ class _MyHomePageState extends State<MyHomePage> {
           print("Can't launch");
       }
 
-      if (Platform.isAndroid) {
-        Fluttertoast.showToast(
-            msg: "Android Says: App Inbox Clicked",
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.CENTER,
-            timeInSecForIosWeb: 1,
-            backgroundColor: Colors.red,
-            textColor: Colors.white,
-            fontSize: 16.0);
-      } else if (Platform.isIOS) {
-        Fluttertoast.showToast(
-            msg: "iOS Says: App Inbox Clicked",
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.CENTER,
-            timeInSecForIosWeb: 1,
-            backgroundColor: Colors.red,
-            textColor: Colors.white,
-            fontSize: 16.0);
-      }
+      // if (Platform.isAndroid) {
+      //   Fluttertoast.showToast(
+      //       msg: "Android Says: App Inbox Clicked",
+      //       toastLength: Toast.LENGTH_SHORT,
+      //       gravity: ToastGravity.CENTER,
+      //       timeInSecForIosWeb: 1,
+      //       backgroundColor: Colors.red,
+      //       textColor: Colors.white,
+      //       fontSize: 16.0);
+      // } else if (Platform.isIOS) {
+      //   Fluttertoast.showToast(
+      //       msg: "iOS Says: App Inbox Clicked",
+      //       toastLength: Toast.LENGTH_SHORT,
+      //       gravity: ToastGravity.CENTER,
+      //       timeInSecForIosWeb: 1,
+      //       backgroundColor: Colors.red,
+      //       textColor: Colors.white,
+      //       fontSize: 16.0);
+      // }
     });
   }
 

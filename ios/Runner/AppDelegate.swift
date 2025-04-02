@@ -4,7 +4,7 @@ import CleverTapSDK
 import clevertap_plugin
 
 @main
-@objc class AppDelegate: FlutterAppDelegate, CleverTapPushNotificationDelegate {
+@objc class AppDelegate: FlutterAppDelegate, CleverTapPushNotificationDelegate, CleverTapURLDelegate {
     
     var flutterViewController: FlutterViewController!;
     private let CHANNEL = "customAppInbox"
@@ -24,6 +24,8 @@ import clevertap_plugin
         let appGroupsChannel = FlutterMethodChannel(name: APPGROUPSCHANNEL, binaryMessenger: controller.binaryMessenger)
         
         CleverTap.autoIntegrate()
+        
+        CleverTap.sharedInstance()?.setUrlDelegate(self)
         
         CleverTapPlugin.sharedInstance().applicationDidLaunch(options: launchOptions)
         
@@ -73,6 +75,11 @@ import clevertap_plugin
         print("From dart to iOS EmailID: \(String(describing: dartEmailId))")
         
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+    
+    public func shouldHandleCleverTap(_ url: URL?, for channel: CleverTapChannel) -> Bool {
+        print("Handling URL: \(url!) for channel: \(channel)")
+        return true
     }
     
     private func saveUserInfo(_ userInfo: [String: String]) {

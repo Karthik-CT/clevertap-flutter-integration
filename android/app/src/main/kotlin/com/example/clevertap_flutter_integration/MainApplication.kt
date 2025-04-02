@@ -2,19 +2,18 @@ package com.example.clevertap_flutter_integration
 
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngineCache
-import io.flutter.plugins.GeneratedPluginRegistrant
 import java.util.*
 import android.content.Context
 import android.util.Log
 import com.clevertap.android.sdk.ActivityLifecycleCallback
 import com.clevertap.android.sdk.CleverTapAPI
 import com.clevertap.android.sdk.pushnotification.CTPushNotificationListener
-import io.flutter.app.FlutterApplication
+//import io.flutter.app.FlutterApplication
 import io.flutter.embedding.engine.dart.DartExecutor
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.PluginRegistry
-import io.flutter.plugin.common.PluginRegistry.PluginRegistrantCallback
-import io.flutter.view.FlutterMain
+//import io.flutter.plugin.common.PluginRegistry.PluginRegistrantCallback
+//import io.flutter.view.FlutterMain
 import java.util.*
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -23,11 +22,14 @@ import android.app.NotificationManager
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import androidx.annotation.RequiresApi
 import com.clevertap.android.pushtemplates.PTConstants
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.dart.DartExecutor.DartEntrypoint
 import com.clevertap.android.pushtemplates.PushTemplateNotificationHandler
 import com.clevertap.android.sdk.interfaces.NotificationHandler
+//import io.flutter.app.FlutterApplication
+import io.flutter.plugins.GeneratedPluginRegistrant
 
 // class MainApplication : Application(), CTPushNotificationListener{
 class MainApplication : Application(), Application.ActivityLifecycleCallbacks {
@@ -36,6 +38,7 @@ class MainApplication : Application(), Application.ActivityLifecycleCallbacks {
     private val CHANNEL = "myChannel"
     private lateinit var flutterEngine: FlutterEngine
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate() {
         ActivityLifecycleCallback.register(this)
         registerActivityLifecycleCallbacks(this)
@@ -68,8 +71,8 @@ class MainApplication : Application(), Application.ActivityLifecycleCallbacks {
     }
 
     fun GetMethodChannel(context: Context, r: Map<String, Any>) {
-        FlutterMain.startInitialization(context)
-        FlutterMain.ensureInitializationComplete(context, arrayOfNulls(0))
+//        FlutterMain.startInitialization(context)
+//        FlutterMain.ensureInitializationComplete(context, arrayOfNulls(0))
         val engine = FlutterEngine(context.applicationContext)
         val entrypoint = DartExecutor.DartEntrypoint("lib/home.dart", "main")
         engine.dartExecutor.executeDartEntrypoint(entrypoint)
@@ -96,7 +99,7 @@ class MainApplication : Application(), Application.ActivityLifecycleCallbacks {
     override fun onActivityCreated(p0: Activity, p1: Bundle?) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             val intent = p0.intent
-            NotificationUtils.dismissNotification(intent, applicationContext)
+//            NotificationUtils.dismissNotification(intent, applicationContext)
         }
     }
 
