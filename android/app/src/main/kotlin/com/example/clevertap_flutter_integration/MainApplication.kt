@@ -50,7 +50,6 @@ class MainApplication : Application(), Application.ActivityLifecycleCallbacks {
         //     DartEntrypoint.createDefault()
         // )
 
-
         // CleverTapAPI.setDebugLevel(CleverTapAPI.LogLevel.DEBUG);
         CleverTapAPI.setDebugLevel(3);
 //        CleverTapAPI.createNotificationChannelGroup(this, "YourGroupId", "YourGroupName")
