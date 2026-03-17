@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.clevertap.ct_templates.CT-Templates-merged_res-35:/layout-v21/notification_action.xml",
+        "source": "com.clevertap.ct_templates.CT-Templates-core-1.13.0-10:/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "com.clevertap.ct_templates.CT-Templates-merged_res-35:/layout-v21/notification_template_custom_big.xml",
+        "source": "com.clevertap.ct_templates.CT-Templates-core-1.13.0-10:/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "com.clevertap.ct_templates.CT-Templates-merged_res-35:/layout-v21/notification_action_tombstone.xml",
+        "source": "com.clevertap.ct_templates.CT-Templates-core-1.13.0-10:/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "com.clevertap.ct_templates.CT-Templates-merged_res-35:/layout-v21/notification_template_icon_group.xml",
+        "source": "com.clevertap.ct_templates.CT-Templates-core-1.13.0-10:/layout-v21/notification_template_icon_group.xml"
+    }
+]

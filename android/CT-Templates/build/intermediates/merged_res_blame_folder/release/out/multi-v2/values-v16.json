@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.clevertap.ct_templates.CT-Templates-merged_res-35:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/karthik.iyer/.gradle/caches/transforms-4/aaf25ec3f3cf007c9e7152c44a3612ef/transformed/appcompat-1.7.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.clevertap.ct_templates.CT-Templates-mergeReleaseResources-33:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/karthik.iyer/.gradle/caches/transforms-4/aaf25ec3f3cf007c9e7152c44a3612ef/transformed/appcompat-1.7.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    }
+                }
+            ]
+        }
+    ]
+}

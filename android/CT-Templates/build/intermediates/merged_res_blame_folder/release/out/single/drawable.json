@@ -1,0 +1,454 @@
+[
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/img_dashed_coachmark_end_bottom.png",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/img_dashed_coachmark_end_bottom.png"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/avd_hide_password.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/avd_hide_password.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/progress_1.png",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/progress_1.png"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/notification_bg_low.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-core-1.13.0-10:/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/mtrl_ic_error.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/mtrl_ic_error.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/img_dashed_coachmark_left_bottom.png",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/img_dashed_coachmark_left_bottom.png"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/btn_checkbox_unchecked_mtrl.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/btn_checkbox_unchecked_mtrl.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/cross3.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/cross3.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/custom_progress_drawable.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/custom_progress_drawable.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/ic_baseline_close_24.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/ic_baseline_close_24.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/material_ic_clear_black_24dp.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/material_ic_clear_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_seekbar_track_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/notification_tile_bg.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-core-1.13.0-10:/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/progress_2.png",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/progress_2.png"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/material_ic_calendar_black_24dp.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/material_ic_calendar_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ic_clear_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/progress.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/progress.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ratingbar_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/img_dashed_coachmark_top.png",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/img_dashed_coachmark_top.png"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/ic_mtrl_chip_checked_black.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/ic_mtrl_chip_checked_black.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/img_dashed_coachmark_bottom.png",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/img_dashed_coachmark_bottom.png"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_star_half_black_48dp.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_star_half_black_48dp.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/img_dashed_coachmark_right.png",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/img_dashed_coachmark_right.png"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/mtrl_tabs_default_indicator.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/mtrl_tabs_default_indicator.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/pause_icon.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/pause_icon.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/expand_video_icon.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/expand_video_icon.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/progress_3.png",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/progress_3.png"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/avd_show_password.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/avd_show_password.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/rounded_bg_plain.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/rounded_bg_plain.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/btn_radio_off_mtrl.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/btn_radio_off_mtrl.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/notification_icon_background.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-core-1.13.0-10:/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ic_ab_back_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/ic_baseline_shopping_cart_24.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/ic_baseline_shopping_cart_24.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_textfield_search_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_vector_test.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-resources-1.7.0-9:/drawable/abc_vector_test.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/design_snackbar_background.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/design_snackbar_background.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/design_ic_visibility.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/design_ic_visibility.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/material_ic_menu_arrow_up_black_24dp.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/material_ic_menu_arrow_up_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/mtrl_popupmenu_background.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/mtrl_popupmenu_background.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/dashed_border.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/dashed_border.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/design_password_eye.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/design_password_eye.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/design_fab_background.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/design_fab_background.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ic_menu_cut_mtrl_alpha.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ic_menu_cut_mtrl_alpha.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ic_menu_selectall_mtrl_alpha.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ic_menu_selectall_mtrl_alpha.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/img_dashed_coachmark_left.png",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/img_dashed_coachmark_left.png"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/material_ic_edit_black_24dp.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/material_ic_edit_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/design_ic_visibility_off.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/progress_4.png",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/progress_4.png"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/btn_checkbox_checked_mtrl.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/btn_checkbox_checked_mtrl.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/progress_selector.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/progress_selector.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/test_custom_background.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/test_custom_background.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ic_voice_search_api_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/mute.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/mute.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ic_go_search_api_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_star_black_48dp.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_star_black_48dp.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_text_cursor_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/rounded_bg.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/rounded_bg.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ic_menu_share_mtrl_alpha.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ic_menu_share_mtrl_alpha.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/mtrl_ic_cancel.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/mtrl_ic_cancel.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/btn_radio_off_to_on_mtrl_animation.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/btn_radio_off_to_on_mtrl_animation.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_btn_radio_material_anim.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_btn_radio_material_anim.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/mtrl_ic_arrow_drop_up.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/mtrl_ic_arrow_drop_up.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_btn_check_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/notification_bg.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-core-1.13.0-10:/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/progress_5.png",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/progress_5.png"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/ic_mtrl_chip_close_circle.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/ic_mtrl_chip_close_circle.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/material_ic_menu_arrow_down_black_24dp.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/material_ic_menu_arrow_down_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/pt_dot_sep.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/pt_dot_sep.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/ic_clock_black_24dp.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/ic_clock_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/ic_keyboard_black_24dp.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/ic_keyboard_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/bg_coach_mark.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/bg_coach_mark.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ratingbar_small_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/navigation_empty_icon.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/navigation_empty_icon.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/mtrl_ic_arrow_drop_down.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/mtrl_ic_arrow_drop_down.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/mtrl_dialog_background.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/mtrl_dialog_background.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/mtrl_dropdown_arrow.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/mtrl_dropdown_arrow.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/unmute.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/unmute.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/img_dashed_coachmark_center.png",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/img_dashed_coachmark_center.png"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/ic_mtrl_chip_checked_circle.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/ic_mtrl_chip_checked_circle.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/btn_radio_on_mtrl.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/btn_radio_on_mtrl.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/material_ic_keyboard_arrow_right_black_24dp.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/material_ic_keyboard_arrow_right_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_btn_check_material_anim.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_btn_check_material_anim.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ic_menu_overflow_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/material_ic_keyboard_arrow_left_black_24dp.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/material_ic_keyboard_arrow_left_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_ic_search_api_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/btn_radio_on_to_off_mtrl_animation.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/btn_radio_on_to_off_mtrl_animation.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/ic_mtrl_checked_circle.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-material-1.3.0-22:/drawable/ic_mtrl_checked_circle.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/test_level_drawable.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/test_level_drawable.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/tooltip_frame_dark.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/tooltip_frame_light.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/tooltip_frame_light.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/play_icon.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-main-36:/drawable/play_icon.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_list_selector_holo_light.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-merged_res-35:/drawable/abc_seekbar_thumb_material.xml",
+        "source": "/Users/karthik.iyer/.gradle/daemon/8.7/com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/drawable/abc_seekbar_thumb_material.xml"
+    }
+]

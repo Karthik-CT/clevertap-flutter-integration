@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <layer-list>
+        <!-- Background for the progress bar -->
+        <item>
+            <shape>
+                <solid android:color="@color/light_gray" />
+            </shape>
+        </item>
+        <!-- Progress for the progress bar -->
+        <item android:id="@android:id/progress">
+            <clip>
+                <shape>
+                    <solid android:color="@color/colorAccent" />
+                </shape>
+            </clip>
+        </item>
+        <!-- Custom icon for the progress bar -->
+        <item android:id="@android:id/progress">
+            <bitmap android:gravity="center_vertical|left" android:src="@drawable/ic_baseline_shopping_cart_24" android:tileMode="repeat" />
+        </item>
+    </layer-list>
+</selector>

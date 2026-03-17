@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/draggable_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:background="@android:color/transparent"
+        >
+
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/cancel_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/cross3"
+            android:text=""
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            />
+        <TextView
+            android:id="@+id/expand_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/expand_video_icon"
+            android:text=""
+            android:layout_margin="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            />
+
+
+    </RelativeLayout>
+</FrameLayout>
+

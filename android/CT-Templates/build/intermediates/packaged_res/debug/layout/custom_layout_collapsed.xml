@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:textSize="12sp" />
+
+    <!--<ImageView
+        android:id="@+id/image_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/progress_selector" />-->
+
+    <ViewFlipper
+        android:id="@+id/progress_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:autoStart="true" />
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="5dp">
+
+    <!-- Text section -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/notification_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/notification_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <!-- Discount badge -->
+    <RelativeLayout
+        android:id="@+id/clickarea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/rounded_bg"
+        android:padding="4dp"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/notification_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:rotation="-90"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:maxLines="2"
+            android:breakStrategy="simple"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="end"
+            android:gravity="center_vertical|center"
+            android:padding="5dp"
+            android:background="@drawable/rounded_bg_plain"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:id="@+id/notification_coupon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/notification_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:padding="5dp"
+                android:textIsSelectable="true"
+                android:background="@drawable/dashed_border"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

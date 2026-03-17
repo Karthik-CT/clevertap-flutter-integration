@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.clevertap.ct_templates.CT-Templates-merged_res-35:/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "/Users/karthik.iyer/.gradle/caches/transforms-4/aaf25ec3f3cf007c9e7152c44a3612ef/transformed/appcompat-1.7.0/res/values-watch-v20/values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.clevertap.ct_templates.CT-Templates-mergeReleaseResources-33:/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "/Users/karthik.iyer/.gradle/caches/transforms-4/aaf25ec3f3cf007c9e7152c44a3612ef/transformed/appcompat-1.7.0/res/values-watch-v20/values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}

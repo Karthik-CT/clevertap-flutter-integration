@@ -1,0 +1,63 @@
+PODS:
+  - CleverTap-iOS-SDK (7.1.0):
+    - SDWebImage (~> 5.11)
+  - clevertap_plugin (3.2.0):
+    - CleverTap-iOS-SDK (= 7.1.0)
+    - Flutter
+  - CTNotificationContent (0.2.7)
+  - CTNotificationService (0.1.7)
+  - Flutter (1.0.0)
+  - SDWebImage (5.20.0):
+    - SDWebImage/Core (= 5.20.0)
+  - SDWebImage/Core (5.20.0)
+  - shared_preference_app_group (1.0.0):
+    - Flutter
+  - shared_preferences_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - url_launcher_ios (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - CleverTap-iOS-SDK
+  - clevertap_plugin (from `.symlinks/plugins/clevertap_plugin/ios`)
+  - CTNotificationContent
+  - CTNotificationService
+  - Flutter (from `Flutter`)
+  - shared_preference_app_group (from `.symlinks/plugins/shared_preference_app_group/ios`)
+  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
+  - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
+
+SPEC REPOS:
+  trunk:
+    - CleverTap-iOS-SDK
+    - CTNotificationContent
+    - CTNotificationService
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  clevertap_plugin:
+    :path: ".symlinks/plugins/clevertap_plugin/ios"
+  Flutter:
+    :path: Flutter
+  shared_preference_app_group:
+    :path: ".symlinks/plugins/shared_preference_app_group/ios"
+  shared_preferences_foundation:
+    :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
+  url_launcher_ios:
+    :path: ".symlinks/plugins/url_launcher_ios/ios"
+
+SPEC CHECKSUMS:
+  CleverTap-iOS-SDK: 571ced90fc6378635db504f9767c62858e2c5286
+  clevertap_plugin: 7d4dc369cf1206ef91f7986a433cd273cad153b2
+  CTNotificationContent: 149ec0d68884bf26ef0c045199f6a4e1b5a22dfd
+  CTNotificationService: 3eceea27cf0e28a2e14267bb706013363eb620c6
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  SDWebImage: 73c6079366fea25fa4bb9640d5fb58f0893facd8
+  shared_preference_app_group: 46aee3873e1da581d4904bece9876596d7f66725
+  shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
+  url_launcher_ios: 5334b05cef931de560670eeae103fd3e431ac3fe
+
+PODFILE CHECKSUM: b3f588474f55b63e9a5a7a4b84ffe10c68b9c866
+
+COCOAPODS: 1.15.2

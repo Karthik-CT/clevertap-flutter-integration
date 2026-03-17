@@ -1,0 +1,15 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.clevertap.ct_templates" >
+4
+5    <uses-sdk android:minSdkVersion="24" />
+5-->/Users/karthik.iyer/Documents/Karthik_Temp_Laptop_Data_30Sept/IntegrationProjects/Android/clevertap-custom-templates-featureAppBranch/clevertap-custom-templates/CT-Templates/src/main/AndroidManifest.xml
+6
+7    <uses-permission android:name="android.permission.INTERNET" />
+7-->/Users/karthik.iyer/Documents/Karthik_Temp_Laptop_Data_30Sept/IntegrationProjects/Android/clevertap-custom-templates-featureAppBranch/clevertap-custom-templates/CT-Templates/src/main/AndroidManifest.xml:3:5-67
+7-->/Users/karthik.iyer/Documents/Karthik_Temp_Laptop_Data_30Sept/IntegrationProjects/Android/clevertap-custom-templates-featureAppBranch/clevertap-custom-templates/CT-Templates/src/main/AndroidManifest.xml:3:22-64
+8    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+8-->/Users/karthik.iyer/Documents/Karthik_Temp_Laptop_Data_30Sept/IntegrationProjects/Android/clevertap-custom-templates-featureAppBranch/clevertap-custom-templates/CT-Templates/src/main/AndroidManifest.xml:4:5-77
+8-->/Users/karthik.iyer/Documents/Karthik_Temp_Laptop_Data_30Sept/IntegrationProjects/Android/clevertap-custom-templates-featureAppBranch/clevertap-custom-templates/CT-Templates/src/main/AndroidManifest.xml:4:22-74
+9
+10</manifest>

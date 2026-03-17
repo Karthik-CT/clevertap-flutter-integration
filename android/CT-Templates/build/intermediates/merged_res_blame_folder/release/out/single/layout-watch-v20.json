@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.clevertap.ct_templates.CT-Templates-merged_res-35:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "source": "com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "com.clevertap.ct_templates.CT-Templates-merged_res-35:/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "source": "com.clevertap.ct_templates.CT-Templates-appcompat-1.7.0-19:/layout-watch-v20/abc_alert_dialog_title_material.xml"
+    }
+]

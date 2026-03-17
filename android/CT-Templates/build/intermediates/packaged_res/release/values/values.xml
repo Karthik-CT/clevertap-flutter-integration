@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <attr format="color" name="colorOutlineVariant"/>
+    <attr format="color" name="colorPrimary"/>
+    <attr format="color" name="colorSurface"/>
+    <attr format="color" name="textColorPrimary"/>
+    <attr format="color" name="textColorPrimaryInverse"/>
+    <attr format="reference" name="ttlm_defaultStyle"/>
+    <color name="black">#FF000000</color>
+    <color name="colorAccent">#30A23E</color>
+    <color name="colorBlackSoft">#262626</color>
+    <color name="colorGraySoft">#efefef</color>
+    <color name="light_gray">#434047</color>
+    <color name="spotlightBackground">#BC000000</color>
+    <color name="tooltipOrangeColor">#FF9800</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="dimen_10dp">10dp</dimen>
+    <dimen name="large_icon">40dp</dimen>
+    <dimen name="margin_07">7dp</dimen>
+    <dimen name="metadata_margin_x">10dp</dimen>
+    <dimen name="metadata_small_icon_x">10dp</dimen>
+    <dimen name="metadata_small_icon_y">10dp</dimen>
+    <dimen name="metadata_title_margin_horizontal">10dp</dimen>
+    <dimen name="metadata_title_margin_vertical">10dp</dimen>
+    <dimen name="padding_negative">-5dp</dimen>
+    <dimen name="padding_vertical">10dp</dimen>
+    <dimen name="ttlm_default_corner_radius">6dip</dimen>
+    <dimen name="ttlm_default_elevation">2dp</dimen>
+    <dimen name="ttlm_default_padding">20dip</dimen>
+    <dimen name="ttlm_default_stroke_weight">0dip</dimen>
+    <string name="coachmarkLabel_value_limit">%s/%s</string>
+    <string name="coachmarkNext">Next</string>
+    <string name="coachmarkSkip">Skip</string>
+    <string name="coupon_code">COUPON CODE</string>
+    <string name="end">end</string>
+    <string name="label_btn_explore">Ready To Explore</string>
+    <string name="label_finish">Finish</string>
+    <string name="label_ini_label_coachMark_top">label coachMark top</string>
+    <string name="lorem_ipsum_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="start">start</string>
+    <string name="title_bottom">this is bottom</string>
+    <string name="title_end_bottom">this is end bottom</string>
+    <string name="title_end_top">this is end top</string>
+    <string name="title_start_bottom">this is start bottom</string>
+    <string name="title_start_top">this is start top</string>
+    <string name="title_top">this is Top</string>
+    <style name="MetaData">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FF0000</item> 
+        <item name="android:layout_margin">8dp</item>
+    </style>
+    <style name="PushMessageMultiLine">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FF0000</item> 
+        <item name="android:layout_margin">8dp</item>
+    </style>
+    <style name="PushTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FF0000</item> 
+        <item name="android:layout_margin">8dp</item>
+    </style>
+    <style name="ToolTipAltAnimation">
+        <item name="android:windowExitAnimation">@anim/ttlm_tooltip_anim_exit</item>
+        <item name="android:windowEnterAnimation">@anim/ttlm_tooltip_anim_enter</item>
+    </style>
+    <style name="ToolTipAltStyle" parent="ToolTipLayoutDefaultStyle">
+        <item name="ttlm_padding">16dp</item>
+        <item name="ttlm_backgroundColor">@color/tooltipOrangeColor</item>
+        <item name="ttlm_cornerRadius">6dp</item>
+        <item name="ttlm_arrowRatio">1.2</item>
+        <item name="ttlm_overlayStyle">@style/ToolTipOverlayAltStyle</item>
+        <item name="ttlm_animationStyle">@style/ToolTipAltAnimation</item>
+        <item name="ttlm_textStyle">@style/ToolTipAltTextStyle</item>
+    </style>
+    <style name="ToolTipAltTextStyle" parent="ToolTipTextStyle">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="ToolTipAnimation">
+        <item name="android:windowEnterAnimation">@anim/ttlm_tooltip_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/ttlm_tooltip_anim_exit</item>
+    </style>
+    <style name="ToolTipLayoutDefaultStyle">
+        <item name="ttlm_padding">@dimen/ttlm_default_padding</item>
+        <item name="ttlm_strokeColor">@android:color/transparent</item>
+        <item name="ttlm_backgroundColor">?attr/colorAccent</item>
+        <item name="ttlm_strokeWeight">@dimen/ttlm_default_stroke_weight</item>
+        <item name="ttlm_cornerRadius">@dimen/ttlm_default_corner_radius</item>
+        <item name="ttlm_arrowRatio">1.4</item>
+        <item name="ttlm_overlayStyle">@style/ToolTipOverlayDefaultStyle</item>
+        <item name="ttlm_animationStyle">@style/ToolTipAnimation</item>
+        <item name="ttlm_textStyle">@style/ToolTipTextStyle</item>
+    </style>
+    <style name="ToolTipOverlayAltStyle" parent="ToolTipOverlayDefaultStyle">
+        <item name="android:color">#FF333333</item>
+        <item name="android:alpha">0.3</item>
+    </style>
+    <style name="ToolTipOverlayDefaultStyle">
+        <item name="android:color">?attr/colorAccent</item>
+        <item name="ttlm_repeatCount">99</item>
+        <item name="ttlm_duration">600</item>
+        <item name="android:alpha">0.5</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+    <style name="ToolTipTextStyle" parent="TextAppearance.AppCompat.Small.Inverse">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:autoLink">all</item>
+        <item name="android:linksClickable">true</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmallInverse</item>
+        <item name="android:textColorLink">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:gravity">start|top</item>
+        <item name="android:elevation" ns1:ignore="NewApi">@dimen/ttlm_default_elevation</item>
+        <item name="android:translationZ" ns1:ignore="NewApi">@dimen/ttlm_default_elevation</item>
+    </style>
+    <declare-styleable name="TooltipLayout">
+        <attr format="dimension" name="ttlm_padding"/>
+        <attr format="color" name="ttlm_strokeColor"/>
+        <attr format="color" name="ttlm_backgroundColor"/>
+        <attr format="dimension" name="ttlm_strokeWeight"/>
+        <attr format="dimension" name="ttlm_cornerRadius"/>
+        <attr format="float" name="ttlm_arrowRatio"/>
+        <attr format="reference" name="ttlm_overlayStyle"/>
+        <attr format="string" name="ttlm_font"/>
+        <attr format="reference" name="ttlm_animationStyle"/>
+
+        
+        <attr format="reference" name="ttlm_textStyle"/>
+    </declare-styleable>
+    <declare-styleable name="TooltipOverlay">
+        <attr name="android:color"/>
+        <attr name="android:alpha"/>
+        <attr format="integer" name="ttlm_repeatCount"/>
+        <attr format="integer" name="ttlm_duration"/>
+        <attr name="android:layout_margin"/>
+    </declare-styleable>
+</resources>
